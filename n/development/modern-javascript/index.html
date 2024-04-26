@@ -45,38 +45,38 @@
 
 <div role="radiogroup" aria-label="Appearance" class="theme-switcher" x-data x-cloak lang="en">
   <input
-    id="id-b4318aef-light"
+    id="id-732082a7-light"
     type="radio"
     name="appearance"
     x-model="$store.appearance.theme"
     value="light"
     class="visually-hidden"
   >
-  <label for="id-b4318aef-light" class="theme-switcher__label" aria-label="Light">
+  <label for="id-732082a7-light" class="theme-switcher__label" aria-label="Light">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
   </label>
 
   <input
-    id="id-b4318aef-dark"
+    id="id-732082a7-dark"
     type="radio"
     name="appearance"
     x-model="$store.appearance.theme"
     value="dark"
     class="visually-hidden"
   >
-  <label for="id-b4318aef-dark" class="theme-switcher__label" aria-label="Dark">
+  <label for="id-732082a7-dark" class="theme-switcher__label" aria-label="Dark">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
   </label>
 
   <input
-    id="id-b4318aef-system"
+    id="id-732082a7-system"
     type="radio"
     name="appearance"
     x-model="$store.appearance.theme"
     value="system"
     class="visually-hidden"
   >
-  <label for="id-b4318aef-system" class="theme-switcher__label" aria-label="System">
+  <label for="id-732082a7-system" class="theme-switcher__label" aria-label="System">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
   </label>
 </div>
@@ -96,11 +96,11 @@
       role="combobox"
       aria-autocomplete="list"
       aria-haspopup="listbox"
-      aria-owns="id-5bec8ecd-popup"
-      aria-controls="id-5bec8ecd-popup"
+      aria-owns="id-2dccead2-popup"
+      aria-controls="id-2dccead2-popup"
       aria-activedescendant
       aria-expanded="false"
-      :aria-activedescendant="open && selectedId ? `id-5bec8ecd-result-${selectedId}` : ''"
+      :aria-activedescendant="open && selectedId ? `id-2dccead2-result-${selectedId}` : ''"
       :aria-expanded="open"
       placeholder="Search"
       class="search__input"
@@ -121,7 +121,7 @@
       <span class="visually-hidden" lang="en">Press <kbd>/<kbd> to activate search</span>
     
     <template x-if="open">
-      <div class="search__popover" id="id-5bec8ecd-popup">
+      <div class="search__popover" id="id-2dccead2-popup">
         <div x-show="!term" class="search__info" lang="en">
           Search by title, content and #tags
         </div>
@@ -135,7 +135,7 @@
         <ul x-show="term && results && results.length" class="search__results" role="listbox" aria-label="Search Results">
           <template x-if="term && results && results.length">
             <template x-for="(result, index) in results" :key="result.id">
-              <li role="option" :id="`id-5bec8ecd-result-${result.id}`">
+              <li role="option" :id="`id-2dccead2-result-${result.id}`">
                 <a
                   :href="result.url"
                   class="search__result"
@@ -193,7 +193,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
           
           
-          <span>Welcome</span>
+          <span>Extension</span>
         </a>
       </li>
       
@@ -938,16 +938,16 @@
     <ul class="grouped-links__list" role="list" aria-labelledby="app-panel-incoming">
       
         <li>
-          <a href="/n/development/webassembly/" class="grouped-links__link">
+          <a href="/" class="grouped-links__link">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-            <span>WebAssembly</span>
+            <span>Extension</span>
           </a>
         </li>
       
         <li>
-          <a href="/" class="grouped-links__link">
+          <a href="/n/development/webassembly/" class="grouped-links__link">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-            <span>Welcome</span>
+            <span>WebAssembly</span>
           </a>
         </li>
       
