@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en" data-theme="system"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple, lightweight, and flexible note-taking template for Eleventy.">
+    <meta name="description" content="Plug-and-play, zero-config, cross-browser extension development tool.">
     <title>Environment Variables</title>
     <meta name="generator" content="Eleventy v2.0.1">
     <link rel="stylesheet" href="/app.green.css">
@@ -35,18 +35,18 @@
   
 
 <div role="radiogroup" aria-label="Appearance" class="theme-switcher" x-data="" x-cloak="" lang="en">
-  <input id="id-0624ab06-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
-  <label for="id-0624ab06-light" class="theme-switcher__label" aria-label="Light">
+  <input id="id-02045d01-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
+  <label for="id-02045d01-light" class="theme-switcher__label" aria-label="Light">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
   </label>
 
-  <input id="id-0624ab06-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
-  <label for="id-0624ab06-dark" class="theme-switcher__label" aria-label="Dark">
+  <input id="id-02045d01-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
+  <label for="id-02045d01-dark" class="theme-switcher__label" aria-label="Dark">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
   </label>
 
-  <input id="id-0624ab06-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
-  <label for="id-0624ab06-system" class="theme-switcher__label" aria-label="System">
+  <input id="id-02045d01-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
+  <label for="id-02045d01-system" class="theme-switcher__label" aria-label="System">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
   </label>
 </div>
@@ -60,13 +60,13 @@
   
 
   <div x-cloak="" x-data="search" @click.away="open = false" class="search" data-mode="overlay">
-    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-c484ac3b-popup" aria-controls="id-c484ac3b-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-c484ac3b-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
+    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-39f76867-popup" aria-controls="id-39f76867-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-39f76867-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
     
       <kbd class="search__kbd" aria-hidden="true">/</kbd>
       <span class="visually-hidden" lang="en">Press <kbd>/<kbd> to activate search</kbd></kbd></span>
     
     <template x-if="open">
-      <div class="search__popover" id="id-c484ac3b-popup">
+      <div class="search__popover" id="id-39f76867-popup">
         <div x-show="!term" class="search__info" lang="en">
           Search by title, content and #tags
         </div>
@@ -80,7 +80,7 @@
         <ul x-show="term &amp;&amp; results &amp;&amp; results.length" class="search__results" role="listbox" aria-label="Search Results">
           <template x-if="term &amp;&amp; results &amp;&amp; results.length">
             <template x-for="(result, index) in results" :key="result.id">
-              <li role="option" :id="`id-c484ac3b-result-${result.id}`">
+              <li role="option" :id="`id-39f76867-result-${result.id}`">
                 <a :href="result.url" class="search__result" :aria-selected="result.id === selectedId" x-effect="result.id === selectedId &amp;&amp; $el.scrollIntoView({ block: 'nearest' })" :data-first="index == 0">
                   <span class="search__note-title" x-text="result.title"></span>
                   <span class="search__note-content" x-html="result.excerpt"></span>
@@ -149,7 +149,7 @@
           </li>
         
           <li>
-            <a href="https://github.com/cezaraugusto/Extension/graphs/contributors" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
+            <a href="https://github.com/cezaraugusto/extension/graphs/contributors" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
               <span>Contributors Hall of Fame</span>
             </a>
@@ -587,14 +587,14 @@
 </svg>
 
 
-</div><div>Warning</div></div><div class="callout__content article"><p>This feature is not stable yet. You can track its development <a href="https://github.com/cezaraugusto/Extension/issues/40">here</a>.</p>
+</div><div>Warning</div></div><div class="callout__content article"><p>This feature is not stable yet. You can track its development <a href="https://github.com/cezaraugusto/extension/issues/40">here</a>.</p>
 </div></div>
 <p>Take for example, our ChatGPT <a href="/template">Template</a>.</p>
 <p><img src="./fbbe6298507ce15cadd7dc30fde4db780818f9aa.png" alt="ChatGPT Extension Template"></p>
 <p>See that it expects the <code>EXTENSION_OPENAI_API_KEY</code> environment variable? Create an <code>.env</code> file at the project root so Extension can parse its contents at runtime.</p>
 <!--
 print of the message saying the env file was loaded
-https://github.com/cezaraugusto/Extension/issues/41
+https://github.com/cezaraugusto/extension/issues/41
 -->
 <p>The following file names are supported:</p>
 <ul>
@@ -731,7 +731,7 @@ Your extension have access to some default environment variables from Extension.
     <ul class="grouped-links__list" role="list" aria-labelledby="app-panel-external">
       
         <li>
-          <a href="https://github.com/cezaraugusto/Extension/issues/40" class="grouped-links__link" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/cezaraugusto/extension/issues/40" class="grouped-links__link" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
             <span>here</span>
           </a>
@@ -750,7 +750,7 @@ Your extension have access to some default environment variables from Extension.
 
     
   
-    <a href="https://github.com/cezaraugusto/Extension/edit/main/Development/Environment%20Variables.md" class="toggle-btn" lang="en">
+    <a href="https://github.com/cezaraugusto/extension/edit/main/Development/Environment%20Variables.md" class="toggle-btn" lang="en">
       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
       <span>Edit</span>
     </a>

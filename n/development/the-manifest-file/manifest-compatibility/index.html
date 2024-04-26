@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en" data-theme="system"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple, lightweight, and flexible note-taking template for Eleventy.">
+    <meta name="description" content="Plug-and-play, zero-config, cross-browser extension development tool.">
     <title>Manifest Compatibility</title>
     <meta name="generator" content="Eleventy v2.0.1">
     <link rel="stylesheet" href="/app.green.css">
@@ -35,18 +35,18 @@
   
 
 <div role="radiogroup" aria-label="Appearance" class="theme-switcher" x-data="" x-cloak="" lang="en">
-  <input id="id-27c0d690-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
-  <label for="id-27c0d690-light" class="theme-switcher__label" aria-label="Light">
+  <input id="id-ca43a050-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
+  <label for="id-ca43a050-light" class="theme-switcher__label" aria-label="Light">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
   </label>
 
-  <input id="id-27c0d690-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
-  <label for="id-27c0d690-dark" class="theme-switcher__label" aria-label="Dark">
+  <input id="id-ca43a050-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
+  <label for="id-ca43a050-dark" class="theme-switcher__label" aria-label="Dark">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
   </label>
 
-  <input id="id-27c0d690-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
-  <label for="id-27c0d690-system" class="theme-switcher__label" aria-label="System">
+  <input id="id-ca43a050-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
+  <label for="id-ca43a050-system" class="theme-switcher__label" aria-label="System">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
   </label>
 </div>
@@ -60,13 +60,13 @@
   
 
   <div x-cloak="" x-data="search" @click.away="open = false" class="search" data-mode="overlay">
-    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-7a647400-popup" aria-controls="id-7a647400-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-7a647400-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
+    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-cb875258-popup" aria-controls="id-cb875258-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-cb875258-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
     
       <kbd class="search__kbd" aria-hidden="true">/</kbd>
       <span class="visually-hidden" lang="en">Press <kbd>/<kbd> to activate search</kbd></kbd></span>
     
     <template x-if="open">
-      <div class="search__popover" id="id-7a647400-popup">
+      <div class="search__popover" id="id-cb875258-popup">
         <div x-show="!term" class="search__info" lang="en">
           Search by title, content and #tags
         </div>
@@ -80,7 +80,7 @@
         <ul x-show="term &amp;&amp; results &amp;&amp; results.length" class="search__results" role="listbox" aria-label="Search Results">
           <template x-if="term &amp;&amp; results &amp;&amp; results.length">
             <template x-for="(result, index) in results" :key="result.id">
-              <li role="option" :id="`id-7a647400-result-${result.id}`">
+              <li role="option" :id="`id-cb875258-result-${result.id}`">
                 <a :href="result.url" class="search__result" :aria-selected="result.id === selectedId" x-effect="result.id === selectedId &amp;&amp; $el.scrollIntoView({ block: 'nearest' })" :data-first="index == 0">
                   <span class="search__note-title" x-text="result.title"></span>
                   <span class="search__note-content" x-html="result.excerpt"></span>
@@ -149,7 +149,7 @@
           </li>
         
           <li>
-            <a href="https://github.com/cezaraugusto/Extension/graphs/contributors" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
+            <a href="https://github.com/cezaraugusto/extension/graphs/contributors" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
               <span>Contributors Hall of Fame</span>
             </a>
@@ -584,18 +584,18 @@
 <p><img src="./d58a15fb027fa364ffc7d93f65cdc56773b2b575.png" alt="Required Field"></p>
 <p>It is a common standard across all browsers vendors that the minimum Manifest file should contain a <code>name</code>, a <code>version</code>, and a <code>manifest_version</code> field as requirements. Missing one of these fields results in a runtime error.</p>
 <h2 id="check-for-deprecated-fields" tabindex="-1">Check For Deprecated Fields <a class="anchor-link" href="#check-for-deprecated-fields" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h2>
-<p>Fields such as <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page"><code>options_page</code></a> are deprecated in current valid Manifest versions. <s>Using deprecated fields results in a runtime error</s>. <a href="https://github.com/cezaraugusto/Extension/issues/43">This feature is being tracked for future implementation</a>.</p>
+<p>Fields such as <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page"><code>options_page</code></a> are deprecated in current valid Manifest versions. <s>Using deprecated fields results in a runtime error</s>. <a href="https://github.com/cezaraugusto/extension/issues/43">This feature is being tracked for future implementation</a>.</p>
 <h2 id="check-for-invalid-field-types" tabindex="-1">Check For Invalid Field Types <a class="anchor-link" href="#check-for-invalid-field-types" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h2>
 <p><img src="./f7a0882edd002c05b8fb7aadf9e283b54274d9f9.png" alt="Invalid Field"></p>
 <p>While the <a href="https://developer.chrome.com/docs/extensions/reference/api/action"><code>action</code> page in Chrome</a> accepts a <code>default_icon</code> field value as a string, per the <a href="https://json.schemastore.org/chrome-manifest.json">official Manifest JSON Schema</a> it is expected to be an object in Manifest V3. Using invalid field types results in a warning message.</p>
 <!-- 
 ## Check If Field is Supported By The Manifest Version
 
-While the [`web_accessible_resources`](https://developer.chrome.com/docs/extensions/develop/migrate/manifest) field accepts an array of strings in Manifest V2, in Manifest V3 it is set as an array of objects. ~~Using fields not supported by the current `manifest_version` results in an error message~~. [This feature is being tracked for future implementation](https://github.com/cezaraugusto/Extension/issues/42).
+While the [`web_accessible_resources`](https://developer.chrome.com/docs/extensions/develop/migrate/manifest) field accepts an array of strings in Manifest V2, in Manifest V3 it is set as an array of objects. ~~Using fields not supported by the current `manifest_version` results in an error message~~. [This feature is being tracked for future implementation](https://github.com/cezaraugusto/extension/issues/42).
 
 ## Check If Field is Supported By The Current Browser
 
-The property `theme_icons` of [`browser_action`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) enables you to specify different icons for themes depending on whether Firefox detects that the theme uses dark or light text, but it has no effect in Chrome. ~~Using fields not supported by the current browser results in a warning message~~. [This feature is being tracked for future implementation](https://github.com/cezaraugusto/Extension/issues/39).
+The property `theme_icons` of [`browser_action`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) enables you to specify different icons for themes depending on whether Firefox detects that the theme uses dark or light text, but it has no effect in Chrome. ~~Using fields not supported by the current browser results in a warning message~~. [This feature is being tracked for future implementation](https://github.com/cezaraugusto/extension/issues/39).
 -->
 <hr>
 <p><strong>🧩 Extension</strong> • create cross-browser extensions with no build configuration.</p>
@@ -682,7 +682,7 @@ The property `theme_icons` of [`browser_action`](https://developer.mozilla.org/e
         </li>
       
         <li>
-          <a href="https://github.com/cezaraugusto/Extension/issues/43" class="grouped-links__link" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/cezaraugusto/extension/issues/43" class="grouped-links__link" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
             <span>This feature is being tracked for future implementation</span>
           </a>
@@ -715,7 +715,7 @@ The property `theme_icons` of [`browser_action`](https://developer.mozilla.org/e
 
     
   
-    <a href="https://github.com/cezaraugusto/Extension/edit/main/Development/The%20Manifest%20File/Manifest%20Compatibility.md" class="toggle-btn" lang="en">
+    <a href="https://github.com/cezaraugusto/extension/edit/main/Development/The%20Manifest%20File/Manifest%20Compatibility.md" class="toggle-btn" lang="en">
       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
       <span>Edit</span>
     </a>
