@@ -4,7 +4,7 @@
     <meta name="description" content="A simple, lightweight, and flexible note-taking template for Eleventy.">
     <title>React</title>
     <meta name="generator" content="Eleventy v2.0.1">
-    <link rel="stylesheet" href="/docs.extensioncreate.com/app.green.css">
+    <link rel="stylesheet" href="/cezaraugusto/docs.extensioncreate.com/app.green.css">
   </head>
   <body>
     <script defer="" src="https://analytics.us.umami.is/script.js" data-website-id="1dfc106b-1ef8-4e4a-b10c-515ade0e08c8"></script>
@@ -28,25 +28,25 @@
 </div>
 
 
-  <a href="/docs.extensioncreate.com/" class="app-header__title">
-    🧩 Extension.js
+  <a href="/cezaraugusto/docs.extensioncreate.com/" class="app-header__title">
+    🧩 Extension
   </a>
 
   
 
 <div role="radiogroup" aria-label="Appearance" class="theme-switcher" x-data="" x-cloak="" lang="en">
-  <input id="id-a73b2e6c-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
-  <label for="id-a73b2e6c-light" class="theme-switcher__label" aria-label="Light">
+  <input id="id-1b04f77f-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
+  <label for="id-1b04f77f-light" class="theme-switcher__label" aria-label="Light">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
   </label>
 
-  <input id="id-a73b2e6c-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
-  <label for="id-a73b2e6c-dark" class="theme-switcher__label" aria-label="Dark">
+  <input id="id-1b04f77f-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
+  <label for="id-1b04f77f-dark" class="theme-switcher__label" aria-label="Dark">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
   </label>
 
-  <input id="id-a73b2e6c-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
-  <label for="id-a73b2e6c-system" class="theme-switcher__label" aria-label="System">
+  <input id="id-1b04f77f-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
+  <label for="id-1b04f77f-system" class="theme-switcher__label" aria-label="System">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
   </label>
 </div>
@@ -60,13 +60,13 @@
   
 
   <div x-cloak="" x-data="search" @click.away="open = false" class="search" data-mode="overlay">
-    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-bd761465-popup" aria-controls="id-bd761465-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-bd761465-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
+    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-980fc7e6-popup" aria-controls="id-980fc7e6-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-980fc7e6-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
     
       <kbd class="search__kbd" aria-hidden="true">/</kbd>
       <span class="visually-hidden" lang="en">Press <kbd>/<kbd> to activate search</kbd></kbd></span>
     
     <template x-if="open">
-      <div class="search__popover" id="id-bd761465-popup">
+      <div class="search__popover" id="id-980fc7e6-popup">
         <div x-show="!term" class="search__info" lang="en">
           Search by title, content and #tags
         </div>
@@ -80,7 +80,7 @@
         <ul x-show="term &amp;&amp; results &amp;&amp; results.length" class="search__results" role="listbox" aria-label="Search Results">
           <template x-if="term &amp;&amp; results &amp;&amp; results.length">
             <template x-for="(result, index) in results" :key="result.id">
-              <li role="option" :id="`id-bd761465-result-${result.id}`">
+              <li role="option" :id="`id-980fc7e6-result-${result.id}`">
                 <a :href="result.url" class="search__result" :aria-selected="result.id === selectedId" x-effect="result.id === selectedId &amp;&amp; $el.scrollIntoView({ block: 'nearest' })" :data-first="index == 0">
                   <span class="search__note-title" x-text="result.title"></span>
                   <span class="search__note-content" x-html="result.excerpt"></span>
@@ -99,7 +99,7 @@
 
   </div>
   <div class="hide-md">
-    <a href="/docs.extensioncreate.com/search/" class="icon-btn" lang="en">
+    <a href="/cezaraugusto/docs.extensioncreate.com/search/" class="icon-btn" lang="en">
   <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
   <span class="visually-hidden">Search</span>
 </a>
@@ -119,7 +119,7 @@
     <h3 id="app:sidebar:nav" class="visually-hidden" lang="en">Main</h3>
     <ul class="nav-list" role="list" aria-labelledby="app:sidebar:nav">
       <li>
-        <a href="/docs.extensioncreate.com/" class="nav-list__link">
+        <a href="/cezaraugusto/docs.extensioncreate.com/" class="nav-list__link">
           <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
           
           
@@ -128,7 +128,7 @@
       </li>
       
       <li>
-        <a href="/docs.extensioncreate.com/search/" class="nav-list__link" lang="en">
+        <a href="/cezaraugusto/docs.extensioncreate.com/search/" class="nav-list__link" lang="en">
           <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           <span>Search</span>
         </a>
@@ -149,7 +149,7 @@
           </li>
         
           <li>
-            <a href="https://github.com/cezaraugusto/Extension.js/graphs/contributors" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
+            <a href="https://github.com/cezaraugusto/Extension/graphs/contributors" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
               <span>Contributors Hall of Fame</span>
             </a>
@@ -189,7 +189,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/getting-started/get-started-immediately/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/get-started-immediately/" class="nav-list__link">
               <span>🔥 Get Started Immediately</span>
             </a>
             
@@ -202,7 +202,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/getting-started/create-your-first-extension/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/create-your-first-extension/" class="nav-list__link">
               <span>Create Your First Extension</span>
             </a>
             
@@ -215,7 +215,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/getting-started/remote-extension-execution/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/remote-extension-execution/" class="nav-list__link">
               <span>Remote Extension Execution</span>
             </a>
             
@@ -228,7 +228,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/getting-started/templates/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/templates/" class="nav-list__link">
               <span>Templates</span>
             </a>
             
@@ -264,7 +264,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/development/webassembly/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/webassembly/" class="nav-list__link">
               <span>WebAssembly</span>
             </a>
             
@@ -277,7 +277,7 @@
       <li x-data="collapsible('app:sidebar:section:4:group:2:tree:modern-javascript', true)">
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/development/modern-javascript/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/" class="nav-list__link">
               <span>Modern JavaScript</span>
             </a>
             
@@ -299,7 +299,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/development/modern-javascript/ecmascript-modules/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/ecmascript-modules/" class="nav-list__link">
               <span>ECMAScript Modules</span>
             </a>
             
@@ -312,7 +312,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/development/modern-javascript/typescript/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/typescript/" class="nav-list__link">
               <span>TypeScript</span>
             </a>
             
@@ -325,7 +325,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/development/modern-javascript/react/" aria-current="page" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/react/" aria-current="page" class="nav-list__link">
               <span>React</span>
             </a>
             
@@ -344,7 +344,7 @@
       <li x-data="collapsible('app:sidebar:section:4:group:2:tree:modern-css', true)">
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/development/modern-css/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-css/" class="nav-list__link">
               <span>Modern CSS</span>
             </a>
             
@@ -366,7 +366,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/development/modern-css/css-modules/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-css/css-modules/" class="nav-list__link">
               <span>CSS Modules</span>
             </a>
             
@@ -379,7 +379,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/development/modern-css/tailwind-css/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-css/tailwind-css/" class="nav-list__link">
               <span>Tailwind CSS</span>
             </a>
             
@@ -398,7 +398,7 @@
       <li x-data="collapsible('app:sidebar:section:4:group:2:tree:the-manifest-file', true)">
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/development/the-manifest-file/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/" class="nav-list__link">
               <span>The Manifest File</span>
             </a>
             
@@ -420,7 +420,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/development/the-manifest-file/manifest-capabilities/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-capabilities/" class="nav-list__link">
               <span>Manifest Capabilities</span>
             </a>
             
@@ -433,7 +433,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/development/the-manifest-file/manifest-compatibility/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-compatibility/" class="nav-list__link">
               <span>Manifest Compatibility</span>
             </a>
             
@@ -452,7 +452,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/development/environment-variables/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/environment-variables/" class="nav-list__link">
               <span>Environment Variables</span>
             </a>
             
@@ -465,7 +465,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/development/special-folders/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/special-folders/" class="nav-list__link">
               <span>Special Folders</span>
             </a>
             
@@ -496,7 +496,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/commands/reference/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/reference/" class="nav-list__link">
               <span>Reference</span>
             </a>
             
@@ -509,7 +509,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/commands/create/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/create/" class="nav-list__link">
               <span>create</span>
             </a>
             
@@ -522,7 +522,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/commands/dev/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/dev/" class="nav-list__link">
               <span>dev</span>
             </a>
             
@@ -535,7 +535,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/commands/start/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/start/" class="nav-list__link">
               <span>start</span>
             </a>
             
@@ -548,7 +548,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/docs.extensioncreate.com/n/commands/build/" class="nav-list__link">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/build/" class="nav-list__link">
               <span>build</span>
             </a>
             
@@ -579,9 +579,9 @@
       <h1 class="page__title">React</h1>
       <div class="article">
         <p>React is the library for web and native user interfaces.</p>
-<p><code>Extension.js</code> offers built-in support for React and JSX. To have support for React in your extension, ensure you have <a href="#">React</a> and <a href=".">React-DOM</a> set as a <code>dependency</code> or <code>devDependency</code> in your <code>package.json</code> file, and you are all set!</p>
+<p><code>Extension</code> offers built-in support for React and JSX. To have support for React in your extension, ensure you have <a href="#">React</a> and <a href=".">React-DOM</a> set as a <code>dependency</code> or <code>devDependency</code> in your <code>package.json</code> file, and you are all set!</p>
 <h2 id="starter-react-template" tabindex="-1">Starter React Template <a class="anchor-link" href="#starter-react-template" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h2>
-<p>Extension.js comes with a default React template for new projects, which you can use as a starting point for your next React-based Extension. This is the easiest way to have React integrated with Extension.js.</p>
+<p>Extension comes with a default React template for new projects, which you can use as a starting point for your next React-based Extension. This is the easiest way to have React integrated with Extension.</p>
 <p><img src="94a59f7946e9c679974c39f6906b78a33cb2849d.png" alt="React Extension Template"></p>
 <h3 id="try-it-yourself" tabindex="-1">Try it yourself <a class="anchor-link" href="#try-it-yourself" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h3>
 
@@ -598,7 +598,7 @@
           </button>
         </div>
       <h2 id="react-typescript-template" tabindex="-1">React+TypeScript Template <a class="anchor-link" href="#react-typescript-template" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h2>
-<p>Alternatively, <code>Extension.js</code> also supports a React+TypeScript template for a more robust UI.</p>
+<p>Alternatively, <code>Extension</code> also supports a React+TypeScript template for a more robust UI.</p>
 <p><img src="dfbe8024154a88a1a1e97560b3144dbf01ba9346.png" alt="React Extension Template"></p>
 <h3 id="try-it-yourself-1" tabindex="-1">Try it yourself <a class="anchor-link" href="#try-it-yourself-1" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h3>
 
@@ -631,7 +631,7 @@
           </button>
         </div>
       <h3 id="configuration" tabindex="-1">Configuration <a class="anchor-link" href="#configuration" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h3>
-<p><code>Extension.js</code> expects your React files to come from the following file extensions:</p>
+<p><code>Extension</code> expects your React files to come from the following file extensions:</p>
 <ul>
 <li>If TypeScript is not enabled: <code>*.jsx</code>, <code>*.mjsx</code></li>
 <li>If TypeScript is enabled: <code>*.tsx</code>, <code>*.mtsx</code></li>
@@ -692,11 +692,11 @@ root<span class="token punctuation">.</span><span class="token function">render<
         </div>
       
         <div class="code-block">
-          <pre class="language-js"><code class="language-js"><span class="token comment">// MyExtension.jsx</span>
+          <pre class="language-js"><code class="language-js"><span class="token comment">// MyExtensionx</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">MyExtension</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
-    <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>Hello<span class="token punctuation">,</span> Extension<span class="token punctuation">.</span>js<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>Hello<span class="token punctuation">,</span> Extension<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
   <span class="token punctuation">)</span>
 <span class="token punctuation">}</span></code></pre>
 
@@ -745,10 +745,10 @@ root<span class="token punctuation">.</span><span class="token function">render<
         </div>
       <h2 id="next-steps" tabindex="-1">Next Steps <a class="anchor-link" href="#next-steps" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h2>
 <ul>
-<li>Learn more about <a href="/docs.extensioncreate.com/n/development/the-manifest-file/manifest-capabilities/">Manifest Capabilities</a>.</li>
+<li>Learn more about <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-capabilities/">Manifest Capabilities</a>.</li>
 </ul>
 <hr>
-<p><strong>🧩 Extension.js</strong> • create cross-browser extensions with no build configuration.</p>
+<p><strong>🧩 Extension</strong> • create cross-browser extensions with no build configuration.</p>
 
       </div>
     </article>
@@ -848,28 +848,28 @@ root<span class="token punctuation">.</span><span class="token function">render<
     <ul class="grouped-links__list" role="list" aria-labelledby="app-panel-incoming">
       
         <li>
-          <a href="/docs.extensioncreate.com/n/wip-configuration-files/babel/" class="grouped-links__link">
+          <a href="/cezaraugusto/docs.extensioncreate.com/n/wip-configuration-files/babel/" class="grouped-links__link">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             <span>Babel</span>
           </a>
         </li>
       
         <li>
-          <a href="/docs.extensioncreate.com/n/development/modern-javascript/" class="grouped-links__link">
+          <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/" class="grouped-links__link">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             <span>Modern JavaScript</span>
           </a>
         </li>
       
         <li>
-          <a href="/docs.extensioncreate.com/n/development/modern-javascript/typescript/" class="grouped-links__link">
+          <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/typescript/" class="grouped-links__link">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             <span>TypeScript</span>
           </a>
         </li>
       
         <li>
-          <a href="/docs.extensioncreate.com/" class="grouped-links__link">
+          <a href="/cezaraugusto/docs.extensioncreate.com/" class="grouped-links__link">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             <span>Welcome</span>
           </a>
@@ -885,7 +885,7 @@ root<span class="token punctuation">.</span><span class="token function">render<
     <ul class="grouped-links__list" role="list" aria-labelledby="app-panel-outgoing">
       
         <li>
-          <a href="/docs.extensioncreate.com/n/development/the-manifest-file/manifest-capabilities/" class="grouped-links__link">
+          <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-capabilities/" class="grouped-links__link">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             <span>Manifest Capabilities</span>
           </a>
@@ -899,14 +899,14 @@ root<span class="token punctuation">.</span><span class="token function">render<
 
   <div class="inline" data-pagefind-ignore="">
     
-  <button x-data="" x-cloak="" type="button" class="toggle-btn" :aria-pressed="$store.bookmarks.is('/docs.extensioncreate.com/n/development/modern-javascript/react/')" @click="$store.bookmarks.toggle('/docs.extensioncreate.com/n/development/modern-javascript/react/')" lang="en">
+  <button x-data="" x-cloak="" type="button" class="toggle-btn" :aria-pressed="$store.bookmarks.is('/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/react/')" @click="$store.bookmarks.toggle('/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/react/')" lang="en">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bookmark"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
     <span>Bookmark</span>
   </button>
 
     
   
-    <a href="https://github.com/cezaraugusto/Extension.js/edit/main/Development/Modern%20JavaScript/React.md" class="toggle-btn" lang="en">
+    <a href="https://github.com/cezaraugusto/Extension/edit/main/Development/Modern%20JavaScript/React.md" class="toggle-btn" lang="en">
       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
       <span>Edit</span>
     </a>
@@ -924,7 +924,7 @@ root<span class="token punctuation">.</span><span class="token function">render<
       </div>
     </div>
 
-    <script src="/docs.extensioncreate.com/app.js" data-base="/docs.extensioncreate.com/"></script>
+    <script src="/cezaraugusto/docs.extensioncreate.com/app.js" data-base="/cezaraugusto/docs.extensioncreate.com/"></script>
 
     <div aria-hidden="true" hidden="">
       <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hash" id="icon-hash"><line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line></svg>
