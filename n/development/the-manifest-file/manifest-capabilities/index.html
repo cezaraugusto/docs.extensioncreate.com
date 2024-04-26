@@ -4,7 +4,7 @@
     <meta name="description" content="A simple, lightweight, and flexible note-taking template for Eleventy.">
     <title>Manifest Capabilities</title>
     <meta name="generator" content="Eleventy v2.0.1">
-    <link rel="stylesheet" href="/cezaraugusto/docs.extensioncreate.com/app.green.css">
+    <link rel="stylesheet" href="/cezaraugusto/extension.js.org/app.green.css">
   </head>
   <body>
     <script defer="" src="https://analytics.us.umami.is/script.js" data-website-id="1dfc106b-1ef8-4e4a-b10c-515ade0e08c8"></script>
@@ -28,25 +28,25 @@
 </div>
 
 
-  <a href="/cezaraugusto/docs.extensioncreate.com/" class="app-header__title">
+  <a href="/cezaraugusto/extension.js.org/" class="app-header__title">
     🧩 Extension
   </a>
 
   
 
 <div role="radiogroup" aria-label="Appearance" class="theme-switcher" x-data="" x-cloak="" lang="en">
-  <input id="id-c6783fa3-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
-  <label for="id-c6783fa3-light" class="theme-switcher__label" aria-label="Light">
+  <input id="id-4f3f47cb-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
+  <label for="id-4f3f47cb-light" class="theme-switcher__label" aria-label="Light">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
   </label>
 
-  <input id="id-c6783fa3-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
-  <label for="id-c6783fa3-dark" class="theme-switcher__label" aria-label="Dark">
+  <input id="id-4f3f47cb-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
+  <label for="id-4f3f47cb-dark" class="theme-switcher__label" aria-label="Dark">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
   </label>
 
-  <input id="id-c6783fa3-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
-  <label for="id-c6783fa3-system" class="theme-switcher__label" aria-label="System">
+  <input id="id-4f3f47cb-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
+  <label for="id-4f3f47cb-system" class="theme-switcher__label" aria-label="System">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
   </label>
 </div>
@@ -60,13 +60,13 @@
   
 
   <div x-cloak="" x-data="search" @click.away="open = false" class="search" data-mode="overlay">
-    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-9b7f458d-popup" aria-controls="id-9b7f458d-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-9b7f458d-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
+    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-6ec27820-popup" aria-controls="id-6ec27820-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-6ec27820-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
     
       <kbd class="search__kbd" aria-hidden="true">/</kbd>
       <span class="visually-hidden" lang="en">Press <kbd>/<kbd> to activate search</kbd></kbd></span>
     
     <template x-if="open">
-      <div class="search__popover" id="id-9b7f458d-popup">
+      <div class="search__popover" id="id-6ec27820-popup">
         <div x-show="!term" class="search__info" lang="en">
           Search by title, content and #tags
         </div>
@@ -80,7 +80,7 @@
         <ul x-show="term &amp;&amp; results &amp;&amp; results.length" class="search__results" role="listbox" aria-label="Search Results">
           <template x-if="term &amp;&amp; results &amp;&amp; results.length">
             <template x-for="(result, index) in results" :key="result.id">
-              <li role="option" :id="`id-9b7f458d-result-${result.id}`">
+              <li role="option" :id="`id-6ec27820-result-${result.id}`">
                 <a :href="result.url" class="search__result" :aria-selected="result.id === selectedId" x-effect="result.id === selectedId &amp;&amp; $el.scrollIntoView({ block: 'nearest' })" :data-first="index == 0">
                   <span class="search__note-title" x-text="result.title"></span>
                   <span class="search__note-content" x-html="result.excerpt"></span>
@@ -99,7 +99,7 @@
 
   </div>
   <div class="hide-md">
-    <a href="/cezaraugusto/docs.extensioncreate.com/search/" class="icon-btn" lang="en">
+    <a href="/cezaraugusto/extension.js.org/search/" class="icon-btn" lang="en">
   <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
   <span class="visually-hidden">Search</span>
 </a>
@@ -119,7 +119,7 @@
     <h3 id="app:sidebar:nav" class="visually-hidden" lang="en">Main</h3>
     <ul class="nav-list" role="list" aria-labelledby="app:sidebar:nav">
       <li>
-        <a href="/cezaraugusto/docs.extensioncreate.com/" class="nav-list__link">
+        <a href="/cezaraugusto/extension.js.org/" class="nav-list__link">
           <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
           
           
@@ -128,7 +128,7 @@
       </li>
       
       <li>
-        <a href="/cezaraugusto/docs.extensioncreate.com/search/" class="nav-list__link" lang="en">
+        <a href="/cezaraugusto/extension.js.org/search/" class="nav-list__link" lang="en">
           <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           <span>Search</span>
         </a>
@@ -189,7 +189,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/get-started-immediately/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/getting-started/get-started-immediately/" class="nav-list__link">
               <span>🔥 Get Started Immediately</span>
             </a>
             
@@ -202,7 +202,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/create-your-first-extension/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/getting-started/create-your-first-extension/" class="nav-list__link">
               <span>Create Your First Extension</span>
             </a>
             
@@ -215,7 +215,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/remote-extension-execution/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/getting-started/remote-extension-execution/" class="nav-list__link">
               <span>Remote Extension Execution</span>
             </a>
             
@@ -228,7 +228,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/templates/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/getting-started/templates/" class="nav-list__link">
               <span>Templates</span>
             </a>
             
@@ -264,7 +264,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/webassembly/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/development/webassembly/" class="nav-list__link">
               <span>WebAssembly</span>
             </a>
             
@@ -277,7 +277,7 @@
       <li x-data="collapsible('app:sidebar:section:4:group:2:tree:modern-javascript', true)">
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/development/modern-javascript/" class="nav-list__link">
               <span>Modern JavaScript</span>
             </a>
             
@@ -299,7 +299,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/ecmascript-modules/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/development/modern-javascript/ecmascript-modules/" class="nav-list__link">
               <span>ECMAScript Modules</span>
             </a>
             
@@ -312,7 +312,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/typescript/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/development/modern-javascript/typescript/" class="nav-list__link">
               <span>TypeScript</span>
             </a>
             
@@ -325,7 +325,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/react/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/development/modern-javascript/react/" class="nav-list__link">
               <span>React</span>
             </a>
             
@@ -344,7 +344,7 @@
       <li x-data="collapsible('app:sidebar:section:4:group:2:tree:modern-css', true)">
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-css/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/development/modern-css/" class="nav-list__link">
               <span>Modern CSS</span>
             </a>
             
@@ -366,7 +366,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-css/css-modules/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/development/modern-css/css-modules/" class="nav-list__link">
               <span>CSS Modules</span>
             </a>
             
@@ -379,7 +379,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-css/tailwind-css/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/development/modern-css/tailwind-css/" class="nav-list__link">
               <span>Tailwind CSS</span>
             </a>
             
@@ -398,7 +398,7 @@
       <li x-data="collapsible('app:sidebar:section:4:group:2:tree:the-manifest-file', true)">
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/development/the-manifest-file/" class="nav-list__link">
               <span>The Manifest File</span>
             </a>
             
@@ -420,7 +420,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-capabilities/" aria-current="page" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/development/the-manifest-file/manifest-capabilities/" aria-current="page" class="nav-list__link">
               <span>Manifest Capabilities</span>
             </a>
             
@@ -433,7 +433,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-compatibility/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/development/the-manifest-file/manifest-compatibility/" class="nav-list__link">
               <span>Manifest Compatibility</span>
             </a>
             
@@ -452,7 +452,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/environment-variables/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/development/environment-variables/" class="nav-list__link">
               <span>Environment Variables</span>
             </a>
             
@@ -465,7 +465,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/special-folders/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/development/special-folders/" class="nav-list__link">
               <span>Special Folders</span>
             </a>
             
@@ -496,7 +496,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/reference/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/commands/reference/" class="nav-list__link">
               <span>Reference</span>
             </a>
             
@@ -509,7 +509,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/create/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/commands/create/" class="nav-list__link">
               <span>create</span>
             </a>
             
@@ -522,7 +522,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/dev/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/commands/dev/" class="nav-list__link">
               <span>dev</span>
             </a>
             
@@ -535,7 +535,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/start/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/commands/start/" class="nav-list__link">
               <span>start</span>
             </a>
             
@@ -548,7 +548,7 @@
       <li>
         
           <div class="nav-list__link-with-toggle">
-            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/build/" class="nav-list__link">
+            <a href="/cezaraugusto/extension.js.org/n/commands/build/" class="nav-list__link">
               <span>build</span>
             </a>
             
@@ -586,7 +586,7 @@
 <blockquote>
 <p>By <strong><em>supports</em></strong>, we mean live-reload of changes in the browser chrome interface (outside of web ui context) and handling of all file paths in the manifest as entrypoints, allowing full asset handling and output organization of your extension.</p>
 </blockquote>
-<p>Cross-browser manifest support is not something straightfoward as well, so Extension also offers a <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-compatibility/">Manifest Compatibility</a> handler that warns and errors when a mistake is found, to ensure your extension matches the criteria of each browser vendor.</p>
+<p>Cross-browser manifest support is not something straightfoward as well, so Extension also offers a <a href="/cezaraugusto/extension.js.org/n/development/the-manifest-file/manifest-compatibility/">Manifest Compatibility</a> handler that warns and errors when a mistake is found, to ensure your extension matches the criteria of each browser vendor.</p>
 <h3 id="html-support" tabindex="-1">HTML Support <a class="anchor-link" href="#html-support" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h3>
 <p>Fields like the action page and browser page overrides runs in the context of an HTML page. Adding any of these fields to your package JSON will make your .html file an entrypoint for your extension.</p>
 <p><img src="611c341462a347f599c616baf60f460a5d3df09b.png" alt="New extension template"></p>
@@ -749,7 +749,7 @@ The <code>storage.managed_schema</code> property <a href="https://developer.chro
 <p>In Extension, assets imported in <code>content_scripts</code> are set as <code>web_accessible_resources</code> by default.</p>
 <h2 id="next-steps" tabindex="-1">Next Steps <a class="anchor-link" href="#next-steps" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h2>
 <ul>
-<li>Learn how you can handle complimentary files in your extension via <a href="/cezaraugusto/docs.extensioncreate.com/n/development/special-folders/">Special Folders</a>.</li>
+<li>Learn how you can handle complimentary files in your extension via <a href="/cezaraugusto/extension.js.org/n/development/special-folders/">Special Folders</a>.</li>
 </ul>
 <hr>
 <p><strong>🧩 Extension</strong> • create cross-browser extensions with no build configuration.</p>
@@ -828,14 +828,14 @@ The <code>storage.managed_schema</code> property <a href="https://developer.chro
     <ul class="grouped-links__list" role="list" aria-labelledby="app-panel-incoming">
       
         <li>
-          <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/react/" class="grouped-links__link">
+          <a href="/cezaraugusto/extension.js.org/n/development/modern-javascript/react/" class="grouped-links__link">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             <span>React</span>
           </a>
         </li>
       
         <li>
-          <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/" class="grouped-links__link">
+          <a href="/cezaraugusto/extension.js.org/n/development/the-manifest-file/" class="grouped-links__link">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             <span>The Manifest File</span>
           </a>
@@ -851,14 +851,14 @@ The <code>storage.managed_schema</code> property <a href="https://developer.chro
     <ul class="grouped-links__list" role="list" aria-labelledby="app-panel-outgoing">
       
         <li>
-          <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-compatibility/" class="grouped-links__link">
+          <a href="/cezaraugusto/extension.js.org/n/development/the-manifest-file/manifest-compatibility/" class="grouped-links__link">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             <span>Manifest Compatibility</span>
           </a>
         </li>
       
         <li>
-          <a href="/cezaraugusto/docs.extensioncreate.com/n/development/special-folders/" class="grouped-links__link">
+          <a href="/cezaraugusto/extension.js.org/n/development/special-folders/" class="grouped-links__link">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             <span>Special Folders</span>
           </a>
@@ -928,7 +928,7 @@ The <code>storage.managed_schema</code> property <a href="https://developer.chro
 
   <div class="inline" data-pagefind-ignore="">
     
-  <button x-data="" x-cloak="" type="button" class="toggle-btn" :aria-pressed="$store.bookmarks.is('/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-capabilities/')" @click="$store.bookmarks.toggle('/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-capabilities/')" lang="en">
+  <button x-data="" x-cloak="" type="button" class="toggle-btn" :aria-pressed="$store.bookmarks.is('/cezaraugusto/extension.js.org/n/development/the-manifest-file/manifest-capabilities/')" @click="$store.bookmarks.toggle('/cezaraugusto/extension.js.org/n/development/the-manifest-file/manifest-capabilities/')" lang="en">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bookmark"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
     <span>Bookmark</span>
   </button>
@@ -953,7 +953,7 @@ The <code>storage.managed_schema</code> property <a href="https://developer.chro
       </div>
     </div>
 
-    <script src="/cezaraugusto/docs.extensioncreate.com/app.js" data-base="/cezaraugusto/docs.extensioncreate.com/"></script>
+    <script src="/cezaraugusto/extension.js.org/app.js" data-base="/cezaraugusto/extension.js.org/"></script>
 
     <div aria-hidden="true" hidden="">
       <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hash" id="icon-hash"><line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line></svg>
