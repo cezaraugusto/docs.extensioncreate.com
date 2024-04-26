@@ -35,18 +35,18 @@
   
 
 <div role="radiogroup" aria-label="Appearance" class="theme-switcher" x-data="" x-cloak="" lang="en">
-  <input id="id-a5d520b8-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
-  <label for="id-a5d520b8-light" class="theme-switcher__label" aria-label="Light">
+  <input id="id-65de471b-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
+  <label for="id-65de471b-light" class="theme-switcher__label" aria-label="Light">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
   </label>
 
-  <input id="id-a5d520b8-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
-  <label for="id-a5d520b8-dark" class="theme-switcher__label" aria-label="Dark">
+  <input id="id-65de471b-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
+  <label for="id-65de471b-dark" class="theme-switcher__label" aria-label="Dark">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
   </label>
 
-  <input id="id-a5d520b8-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
-  <label for="id-a5d520b8-system" class="theme-switcher__label" aria-label="System">
+  <input id="id-65de471b-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
+  <label for="id-65de471b-system" class="theme-switcher__label" aria-label="System">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
   </label>
 </div>
@@ -60,13 +60,13 @@
   
 
   <div x-cloak="" x-data="search" @click.away="open = false" class="search" data-mode="overlay">
-    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-83c6363a-popup" aria-controls="id-83c6363a-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-83c6363a-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
+    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-c031b46c-popup" aria-controls="id-c031b46c-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-c031b46c-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
     
       <kbd class="search__kbd" aria-hidden="true">/</kbd>
       <span class="visually-hidden" lang="en">Press <kbd>/<kbd> to activate search</kbd></kbd></span>
     
     <template x-if="open">
-      <div class="search__popover" id="id-83c6363a-popup">
+      <div class="search__popover" id="id-c031b46c-popup">
         <div x-show="!term" class="search__info" lang="en">
           Search by title, content and #tags
         </div>
@@ -80,7 +80,7 @@
         <ul x-show="term &amp;&amp; results &amp;&amp; results.length" class="search__results" role="listbox" aria-label="Search Results">
           <template x-if="term &amp;&amp; results &amp;&amp; results.length">
             <template x-for="(result, index) in results" :key="result.id">
-              <li role="option" :id="`id-83c6363a-result-${result.id}`">
+              <li role="option" :id="`id-c031b46c-result-${result.id}`">
                 <a :href="result.url" class="search__result" :aria-selected="result.id === selectedId" x-effect="result.id === selectedId &amp;&amp; $el.scrollIntoView({ block: 'nearest' })" :data-first="index == 0">
                   <span class="search__note-title" x-text="result.title"></span>
                   <span class="search__note-content" x-html="result.excerpt"></span>
