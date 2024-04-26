@@ -1,0 +1,923 @@
+<!DOCTYPE html><html lang="en" data-theme="system"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple, lightweight, and flexible note-taking template for Eleventy.">
+    <title>TypeScript</title>
+    <meta name="generator" content="Eleventy v2.0.1">
+    <link rel="stylesheet" href="/cezaraugusto/docs.extensioncreate.com/app.green.css">
+  </head>
+  <body>
+    <script defer="" src="https://analytics.us.umami.is/script.js" data-website-id="1dfc106b-1ef8-4e4a-b10c-515ade0e08c8"></script>
+    <script>document.documentElement.setAttribute("data-theme", /"(\w+)"+/.exec(localStorage.getItem("theme"))?.[1] || "system")</script>
+    <script>document.documentElement.classList.add("supports-js")</script>
+    <a href="#app-content" class="skip-link" lang="en">
+  Skip to content
+</a>
+
+
+    <div class="app-layout">
+      
+
+<header class="app-header" x-data="" x-bind="WindowScroll">
+  <div class="hide-xl">
+  <button class="icon-btn" :aria-expanded="$store.nav.open" @click="$store.nav.toggle()" x-cloak="" lang="en">
+    <span x-show="!$store.nav.open"><svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span>
+    <span x-show="$store.nav.open"><svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+    <span class="visually-hidden">Menu</span>
+  </button>
+</div>
+
+
+  <a href="/cezaraugusto/docs.extensioncreate.com/" class="app-header__title">
+    🧩 extension-create
+  </a>
+
+  
+
+<div role="radiogroup" aria-label="Appearance" class="theme-switcher" x-data="" x-cloak="" lang="en">
+  <input id="id-b3f7162a-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
+  <label for="id-b3f7162a-light" class="theme-switcher__label" aria-label="Light">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+  </label>
+
+  <input id="id-b3f7162a-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
+  <label for="id-b3f7162a-dark" class="theme-switcher__label" aria-label="Dark">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+  </label>
+
+  <input id="id-b3f7162a-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
+  <label for="id-b3f7162a-system" class="theme-switcher__label" aria-label="System">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+  </label>
+</div>
+
+  
+  <div class="show-md">
+    
+  
+  
+
+  
+
+  <div x-cloak="" x-data="search" @click.away="open = false" class="search" data-mode="overlay">
+    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-78a7d179-popup" aria-controls="id-78a7d179-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-78a7d179-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
+    
+      <kbd class="search__kbd" aria-hidden="true">/</kbd>
+      <span class="visually-hidden" lang="en">Press <kbd>/<kbd> to activate search</kbd></kbd></span>
+    
+    <template x-if="open">
+      <div class="search__popover" id="id-78a7d179-popup">
+        <div x-show="!term" class="search__info" lang="en">
+          Search by title, content and #tags
+        </div>
+        <div x-show="!!term &amp;&amp; results &amp;&amp; !results.length" class="search__info" lang="en">
+          Nothing found, try a different search term.
+        </div>
+        <div x-show="!!term &amp;&amp; !results" class="search__info" lang="en">
+          Searching...
+        </div>
+
+        <ul x-show="term &amp;&amp; results &amp;&amp; results.length" class="search__results" role="listbox" aria-label="Search Results">
+          <template x-if="term &amp;&amp; results &amp;&amp; results.length">
+            <template x-for="(result, index) in results" :key="result.id">
+              <li role="option" :id="`id-78a7d179-result-${result.id}`">
+                <a :href="result.url" class="search__result" :aria-selected="result.id === selectedId" x-effect="result.id === selectedId &amp;&amp; $el.scrollIntoView({ block: 'nearest' })" :data-first="index == 0">
+                  <span class="search__note-title" x-text="result.title"></span>
+                  <span class="search__note-content" x-html="result.excerpt"></span>
+                  <span class="search__selected-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-left"><polyline points="9 10 4 15 9 20"></polyline><path d="M20 4v7a4 4 0 0 1-4 4H4"></path></svg>
+                  </span>
+                </a>
+              </li>
+            </template>
+          </template>
+        </ul>
+      </div>
+    </template>
+  </div>
+
+
+  </div>
+  <div class="hide-md">
+    <a href="/cezaraugusto/docs.extensioncreate.com/search/" class="icon-btn" lang="en">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+  <span class="visually-hidden">Search</span>
+</a>
+
+  </div>
+</header>
+
+      <div class="app-layout__wrapper">
+        <div class="app-layout__sidebar" x-data="scrollContainer('app:sidebar')" x-bind="container" :data-open="$store.nav.open.toString()">
+          <div class="app-layout__sidebar-inner">
+            
+
+<aside>
+  <h2 class="visually-hidden" lang="en">Navigation</h2>
+
+  <nav aria-labelledby="app:sidebar:nav" class="nav-section">
+    <h3 id="app:sidebar:nav" class="visually-hidden" lang="en">Main</h3>
+    <ul class="nav-list" role="list" aria-labelledby="app:sidebar:nav">
+      <li>
+        <a href="/cezaraugusto/docs.extensioncreate.com/" class="nav-list__link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          
+          
+          <span>Welcome</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/cezaraugusto/docs.extensioncreate.com/search/" class="nav-list__link" lang="en">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  
+    <nav aria-labelledby="app:sidebar:section:links" class="nav-section nav-section--continued">
+      <h3 id="app:sidebar:section:links" class="visually-hidden" lang="en">Links</h3>
+      <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:links">
+        
+          <li>
+            <a href="https://github.com/sponsors/cezaraugusto" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-check"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+              <span>Become a Sponsor</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://github.com/cezaraugusto/extension-create/graphs/contributors" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <span>Contributors Hall of Fame</span>
+            </a>
+          </li>
+        
+      </ul>
+    </nav>
+  
+
+  <template x-if="$store.bookmarks.items.length">
+    <nav aria-labelledby="app:sidebar:section:bookmarks" class="nav-section" x-cloak="">
+      <h3 id="app:sidebar:section:bookmarks" class="nav-section__title" lang="en">Bookmarks</h3>
+      <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:bookmarks">
+        <template x-for="bkm in $store.bookmarks.items">
+          <li>
+            <a :href="bkm" class="nav-list__link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <span x-text="$store.bookmarks.index[bkm] || bkm"></span>
+            </a>
+          </li>
+        </template>
+      </ul>
+    </nav>
+  </template>
+
+  
+    
+      <nav aria-labelledby="app:sidebar:section:1" class="nav-section">
+        <h3 id="app:sidebar:section:1" class="nav-section__title">Getting Started</h3>
+        
+          <div class="nav-group" data-expanded="true">
+            
+            <div id="app:sidebar:section:1:group:0:list">
+              
+  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:1:group:0:title">
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/get-started-immediately/" class="nav-list__link">
+              <span>🔥 Get Started Immediately</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/create-your-first-extension/" class="nav-list__link">
+              <span>Create Your First Extension</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/remote-extension-execution/" class="nav-list__link">
+              <span>Remote Extension Execution</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/templates/" class="nav-list__link">
+              <span>Templates</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+  </ul>
+
+            </div>
+          </div>
+        
+      </nav>
+    
+      <nav aria-labelledby="app:sidebar:section:4" class="nav-section">
+        <h3 id="app:sidebar:section:4" class="nav-section__title">Guides</h3>
+        
+          <div class="nav-group" x-data="collapsible('app:sidebar:section:4:group:2:list', true)" :data-expanded="expanded" data-expanded="true">
+            
+              <h4 class="nav-group__title" id="app:sidebar:section:4:group:2:title">
+                <button type="button" class="nav-group__toggle" aria-controls="app:sidebar:section:4:group:2:list" aria-expanded="true" :aria-expanded="expanded" @click="toggle()">
+                  <span>Development</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </h4>
+            
+            <div x-show="expanded" id="app:sidebar:section:4:group:2:list">
+              
+  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:4:group:2:title">
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/webassembly/" class="nav-list__link">
+              <span>WebAssembly</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li x-data="collapsible('app:sidebar:section:4:group:2:tree:modern-javascript', true)">
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/" class="nav-list__link">
+              <span>Modern JavaScript</span>
+            </a>
+            
+              <button type="button" class="nav-list__link nav-list__toggle" aria-controls="app:sidebar:section:4:group:2:tree:modern-javascript:list" aria-expanded="true" :aria-expanded="expanded" @click="toggle()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <span class="visually-hidden">
+                  Toggle Modern JavaScript
+                </span>
+              </button>
+            
+          </div>
+        
+
+        
+          <div x-show="expanded" id="app:sidebar:section:4:group:2:tree:modern-javascript:list">
+            
+  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:4:group:2:title">
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/ecmascript-modules/" class="nav-list__link">
+              <span>ECMAScript Modules</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/typescript/" aria-current="page" class="nav-list__link">
+              <span>TypeScript</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/react/" class="nav-list__link">
+              <span>React</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+  </ul>
+
+          </div>
+        
+      </li>
+    
+      <li x-data="collapsible('app:sidebar:section:4:group:2:tree:modern-css', true)">
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-css/" class="nav-list__link">
+              <span>Modern CSS</span>
+            </a>
+            
+              <button type="button" class="nav-list__link nav-list__toggle" aria-controls="app:sidebar:section:4:group:2:tree:modern-css:list" aria-expanded="true" :aria-expanded="expanded" @click="toggle()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <span class="visually-hidden">
+                  Toggle Modern CSS
+                </span>
+              </button>
+            
+          </div>
+        
+
+        
+          <div x-show="expanded" id="app:sidebar:section:4:group:2:tree:modern-css:list">
+            
+  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:4:group:2:title">
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-css/css-modules/" class="nav-list__link">
+              <span>CSS Modules</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-css/tailwind-css/" class="nav-list__link">
+              <span>Tailwind CSS</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+  </ul>
+
+          </div>
+        
+      </li>
+    
+      <li x-data="collapsible('app:sidebar:section:4:group:2:tree:the-manifest-file', true)">
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/" class="nav-list__link">
+              <span>The Manifest File</span>
+            </a>
+            
+              <button type="button" class="nav-list__link nav-list__toggle" aria-controls="app:sidebar:section:4:group:2:tree:the-manifest-file:list" aria-expanded="true" :aria-expanded="expanded" @click="toggle()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <span class="visually-hidden">
+                  Toggle The Manifest File
+                </span>
+              </button>
+            
+          </div>
+        
+
+        
+          <div x-show="expanded" id="app:sidebar:section:4:group:2:tree:the-manifest-file:list">
+            
+  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:4:group:2:title">
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-capabilities/" class="nav-list__link">
+              <span>Manifest Capabilities</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-compatibility/" class="nav-list__link">
+              <span>Manifest Compatibility</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+  </ul>
+
+          </div>
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/environment-variables/" class="nav-list__link">
+              <span>Environment Variables</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/special-folders/" class="nav-list__link">
+              <span>Special Folders</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+  </ul>
+
+            </div>
+          </div>
+        
+          <div class="nav-group" x-data="collapsible('app:sidebar:section:4:group:3:list', true)" :data-expanded="expanded" data-expanded="true">
+            
+              <h4 class="nav-group__title" id="app:sidebar:section:4:group:3:title">
+                <button type="button" class="nav-group__toggle" aria-controls="app:sidebar:section:4:group:3:list" aria-expanded="true" :aria-expanded="expanded" @click="toggle()">
+                  <span>Commands</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </h4>
+            
+            <div x-show="expanded" id="app:sidebar:section:4:group:3:list">
+              
+  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:4:group:3:title">
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/reference/" class="nav-list__link">
+              <span>Reference</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/create/" class="nav-list__link">
+              <span>create</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/dev/" class="nav-list__link">
+              <span>dev</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/start/" class="nav-list__link">
+              <span>start</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/build/" class="nav-list__link">
+              <span>build</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+  </ul>
+
+            </div>
+          </div>
+        
+      </nav>
+    
+  
+
+  
+</aside>
+
+          </div>
+        </div>
+        <div>
+<div class="page" data-pagefind-body="">
+  <main class="page__main" id="app-content">
+    <article>
+      <h1 class="page__title">TypeScript</h1>
+      <div class="article">
+        <p>TypeScript is JavaScript with syntax for types.</p>
+<p><code>extension-create</code> offers built-in support for TypeScript files.</p>
+<h2 id="starter-typescript-template" tabindex="-1">Starter TypeScript Template <a class="anchor-link" href="#starter-typescript-template" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h2>
+<p><code>extension-create</code> comes with a default TypeScript template for new projects, which you can use as a starting point for your next TypeScript-based Extension. This is the easiest way to have TypeScript integrated with <code>extension-create</code>.</p>
+<p><img src="6b34e20abd01cc86a910b45faca27d7886ceea99.png" alt="TypeScript Extension Template"></p>
+<h4 id="try-it-yourself" tabindex="-1">Try it yourself <a class="anchor-link" href="#try-it-yourself" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h4>
+
+        <div class="code-block">
+          <pre class="language-sh"><code class="language-sh">npx extension create my-extension <span class="token parameter variable">--template</span><span class="token operator">=</span>typescript</code></pre>
+
+          <button title="Copy to clipboard" aria-label="Copy to clipboard" class="code-block__copy" x-cloak="" x-data="copyToClipboard()" x-bind="copyBtn" lang="en">
+            <svg x-show="!copied">
+              <use xlink:href="#icon-copy"></use>
+            </svg>
+            <svg x-show="copied">
+              <use xlink:href="#icon-check"></use>
+            </svg>
+          </button>
+        </div>
+      <div class="callout" data-color="mint" data-type="tip"><div class="callout__title"><div class="callout__icon"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-flame" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"></path>
+</svg>
+
+
+</div><div>Tip</div></div><div class="callout__content article"><p>If you enjoy React, check the React+TypeScript template in the <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/templates/">Templates</a> page.</p>
+</div></div>
+<h2 id="usage-with-an-existing-extension" tabindex="-1">Usage With An Existing Extension <a class="anchor-link" href="#usage-with-an-existing-extension" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h2>
+<h3 id="installation" tabindex="-1">Installation <a class="anchor-link" href="#installation" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h3>
+
+        <div class="code-block">
+          <pre class="language-sh"><code class="language-sh"><span class="token comment"># install TypeScript as a devDependency</span>
+<span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span> typescript
+
+<span class="token comment"># Generates the TypeScript config file:</span>
+<span class="token comment"># -`tsconfig.json`</span>
+
+npx tsc <span class="token parameter variable">--init</span> </code></pre>
+
+          <button title="Copy to clipboard" aria-label="Copy to clipboard" class="code-block__copy" x-cloak="" x-data="copyToClipboard()" x-bind="copyBtn" lang="en">
+            <svg x-show="!copied">
+              <use xlink:href="#icon-copy"></use>
+            </svg>
+            <svg x-show="copied">
+              <use xlink:href="#icon-check"></use>
+            </svg>
+          </button>
+        </div>
+      <h3 id="configuration" tabindex="-1">Configuration <a class="anchor-link" href="#configuration" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h3>
+<h4 id="automatic-typescript-support" tabindex="-1">Automatic TypeScript Support <a class="anchor-link" href="#automatic-typescript-support" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h4>
+<p>If your extension has TypeScript installed but no <code>tsconfig.json</code> file, <code>extension-create</code> will attempt to automate the integration process by creating a <code>tsconfig.json</code> file at the project root, with the following defaults:</p>
+
+        <div class="code-block">
+          <pre class="language-json5"><code class="language-json5"><span class="token property unquoted">compilerOptions</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Allow JavaScript files to be imported inside your project,</span>
+  <span class="token comment">// instead of just .ts and .tsx files</span>
+  <span class="token property">"allowJs"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Allow default imports from modules with no default export</span>
+  <span class="token property">"allowSyntheticDefaultImports"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  
+  <span class="token comment">// Enables emit interoperability between CommonJS and ES Modules</span>
+  <span class="token property">"esModuleInterop"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  
+  <span class="token comment">// Issue an error if a program tries to include a file by a casing</span>
+  <span class="token comment">// different from the casing on disk.</span>
+  <span class="token property">"forceConsistentCasingInFileNames"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  
+  <span class="token comment">// Controls how JSX constructs are emitted in JavaScript files.</span>
+  <span class="token comment">// This only affects output of JS files that started in .tsx files.</span>
+  <span class="token comment">// "react-jsx" if the user extension has React as a dependency or devDependency.</span>
+  <span class="token property">"jsx"</span><span class="token operator">:</span> <span class="token string">"preserve"</span><span class="token punctuation">,</span>
+  
+  <span class="token comment">// Include typings for latest ECMAScript features and DOM APIs</span>
+  <span class="token property">"lib"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"dom"</span><span class="token punctuation">,</span> <span class="token string">"dom.iterable"</span><span class="token punctuation">,</span> <span class="token string">"esnext"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  
+  <span class="token comment">// Use Node's module resolution algorithm; useful if using npm packages</span>
+  <span class="token property">"moduleResolution"</span><span class="token operator">:</span> <span class="token string">"node"</span><span class="token punctuation">,</span>
+  
+  <span class="token comment">// Use ES modules, which are the standard in modern browsers</span>
+  <span class="token property">"module"</span><span class="token operator">:</span> <span class="token string">"esnext"</span><span class="token punctuation">,</span>
+  
+  <span class="token comment">// Allow importing '.json' files</span>
+  <span class="token property">"resolveJsonModule"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  
+  <span class="token comment">// Enable all strict type-checking options</span>
+  <span class="token property">"strict"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  
+  <span class="token comment">// Use the latest ECMAScript version for the target output</span>
+  <span class="token property">"target"</span><span class="token operator">:</span> <span class="token string">"esnext"</span><span class="token punctuation">,</span>
+  
+  <span class="token comment">// Ensure each file can be safely transpiled without relying</span>
+  <span class="token comment">// on other imports</span>
+  <span class="token property">"isolatedModules"</span><span class="token operator">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property unquoted">exclude</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"node_modules"</span><span class="token punctuation">,</span> <span class="token string">"dist"</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre>
+
+          <button title="Copy to clipboard" aria-label="Copy to clipboard" class="code-block__copy" x-cloak="" x-data="copyToClipboard()" x-bind="copyBtn" lang="en">
+            <svg x-show="!copied">
+              <use xlink:href="#icon-copy"></use>
+            </svg>
+            <svg x-show="copied">
+              <use xlink:href="#icon-check"></use>
+            </svg>
+          </button>
+        </div>
+      <h4 id="automatic-type-injection" tabindex="-1">Automatic Type Injection <a class="anchor-link" href="#automatic-type-injection" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h4>
+<p>In order to handle the multiple import capabilities such as <code>import()</code> of JavaScript modules and file assets, <code>extension-create</code> injects a <code>extension.d.ts</code> file at the root of your project folder.</p>
+<p><img src="546eb50fc68ed42e706ba839814ef7344255b328.png" alt="TypeScript Extension Type Definition"></p>
+<div class="callout" data-color="mint" data-type="tip"><div class="callout__title"><div class="callout__icon"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-flame" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"></path>
+</svg>
+
+
+</div><div>Tip</div></div><div class="callout__content article"><p>Ensure the <code>extension.d.ts</code> file is added to your <code>.gitignore</code> file as it is auto-generated and only useful during <code>development</code> mode.</p>
+</div></div>
+<h4 id="tsconfig-json-overrides" tabindex="-1"><code>tsconfig.json</code> Overrides <a class="anchor-link" href="#tsconfig-json-overrides" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h4>
+<p><code>extension-create</code> applies some defaults to your extension <code>tsconfig.json</code> file. The options below overrides any user-defined rules.</p>
+
+        <div class="code-block">
+          <pre class="language-json5"><code class="language-json5"><span class="token punctuation">{</span>
+  <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Generate source maps for debugging. False during production.</span>
+    <span class="token property">"sourceMap"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    
+    <span class="token comment">// Skip type checking of all declaration files (*.d.ts)</span>
+    <span class="token property">"skipLibCheck"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    
+    <span class="token comment">// Whether to embed the source map content in the .js files.</span>
+    <span class="token property">"inlineSourceMap"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    
+    <span class="token comment">// Generates a source map for .d.ts files which map back to the</span>
+    <span class="token comment">// original .ts source file.</span>
+    <span class="token property">"declarationMap"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    
+    <span class="token comment">// Do not emit compiler output files like JavaScript source code,</span>
+    <span class="token comment">// source-maps or declarations.</span>
+    <span class="token property">"noEmit"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    
+    <span class="token comment">// Tells TypeScript to save information about the project graph</span>
+    <span class="token comment">// from the last compilation to files stored on disk.</span>
+    <span class="token property">"incremental"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    
+    <span class="token comment">// This setting lets you specify a file for storing incremental</span>
+    <span class="token comment">// compilation information as a part of composite projects which</span>
+    <span class="token comment">// enables faster building of larger TypeScript codebases.</span>
+    <span class="token property">"tsBuildInfoFile"</span><span class="token operator">:</span> <span class="token string">"./node_modules/.cache/tsbuildinfo"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"exclude"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"node_modules"</span><span class="token punctuation">,</span> <span class="token string">"dist"</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre>
+
+          <button title="Copy to clipboard" aria-label="Copy to clipboard" class="code-block__copy" x-cloak="" x-data="copyToClipboard()" x-bind="copyBtn" lang="en">
+            <svg x-show="!copied">
+              <use xlink:href="#icon-copy"></use>
+            </svg>
+            <svg x-show="copied">
+              <use xlink:href="#icon-check"></use>
+            </svg>
+          </button>
+        </div>
+      <h2 id="next-steps" tabindex="-1">Next Steps <a class="anchor-link" href="#next-steps" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h2>
+<ul>
+<li>Learn how <code>extension-create</code> works with extensions using <a href="/cezaraugusto/docs.extensioncreate.com/css-pre-processors">CSS Pre-Processors</a>.</li>
+<li>Learn how <code>extension-create</code> works with extensions using <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/react/">React</a>.</li>
+</ul>
+<hr>
+<p><strong>🧩 extension-create</strong> • create cross-browser extensions with no build configuration.</p>
+
+      </div>
+    </article>
+  </main>
+
+  
+  <div class="page__panel">
+    
+
+
+<aside class="stack" data-stack="6">
+  
+  
+  <div class="toc" data-pagefind-ignore="">
+    <h2 class="toc__label" id="app-panel-toc" lang="en">Table of Contents</h2>
+    <ul class="toc__list" role="list" aria-labelledby="app-panel-toc">
+      
+      <li style="--level: 1" class="toc__item">
+        <a href="#starter-typescript-template" class="toc__link">
+          Starter TypeScript Template 
+        </a>
+      </li>
+      
+      <li style="--level: 3" class="toc__item">
+        <a href="#try-it-yourself" class="toc__link">
+          Try it yourself 
+        </a>
+      </li>
+      
+      <li style="--level: 1" class="toc__item">
+        <a href="#usage-with-an-existing-extension" class="toc__link">
+          Usage With An Existing Extension 
+        </a>
+      </li>
+      
+      <li style="--level: 2" class="toc__item">
+        <a href="#installation" class="toc__link">
+          Installation 
+        </a>
+      </li>
+      
+      <li style="--level: 2" class="toc__item">
+        <a href="#configuration" class="toc__link">
+          Configuration 
+        </a>
+      </li>
+      
+      <li style="--level: 3" class="toc__item">
+        <a href="#automatic-typescript-support" class="toc__link">
+          Automatic TypeScript Support 
+        </a>
+      </li>
+      
+      <li style="--level: 3" class="toc__item">
+        <a href="#automatic-type-injection" class="toc__link">
+          Automatic Type Injection 
+        </a>
+      </li>
+      
+      <li style="--level: 3" class="toc__item">
+        <a href="#tsconfig-json-overrides" class="toc__link">
+          tsconfig.json Overrides 
+        </a>
+      </li>
+      
+      <li style="--level: 1" class="toc__item">
+        <a href="#next-steps" class="toc__link">
+          Next Steps 
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+  
+
+  
+  
+
+  
+
+  
+  
+  <div class="grouped-links" data-pagefind-ignore="">
+    <h2 class="grouped-links__label" id="app-panel-incoming" lang="en">Incoming</h2>
+    <ul class="grouped-links__list" role="list" aria-labelledby="app-panel-incoming">
+      
+        <li>
+          <a href="/cezaraugusto/docs.extensioncreate.com/n/wip-configuration-files/babel/" class="grouped-links__link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Babel</span>
+          </a>
+        </li>
+      
+        <li>
+          <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/" class="grouped-links__link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Modern JavaScript</span>
+          </a>
+        </li>
+      
+        <li>
+          <a href="/cezaraugusto/docs.extensioncreate.com/" class="grouped-links__link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Welcome</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+
+  
+  <div class="grouped-links" data-pagefind-ignore="">
+    <h2 class="grouped-links__label" id="app-panel-outgoing" lang="en">Outgoing</h2>
+    <ul class="grouped-links__list" role="list" aria-labelledby="app-panel-outgoing">
+      
+        <li>
+          <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/templates/" class="grouped-links__link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <span>Templates</span>
+          </a>
+        </li>
+      
+        <li>
+          <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/react/" class="grouped-links__link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <span>React</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+  
+  
+
+  <div class="inline" data-pagefind-ignore="">
+    
+  <button x-data="" x-cloak="" type="button" class="toggle-btn" :aria-pressed="$store.bookmarks.is('/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/typescript/')" @click="$store.bookmarks.toggle('/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/typescript/')" lang="en">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bookmark"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+    <span>Bookmark</span>
+  </button>
+
+    
+  
+    <a href="https://github.com/cezaraugusto/extension-create/edit/main/Development/Modern%20JavaScript/TypeScript.md" class="toggle-btn" lang="en">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+      <span>Edit</span>
+    </a>
+  
+
+  </div>
+</aside>
+
+  </div>
+  
+</div>
+
+
+</div>
+      </div>
+    </div>
+
+    <script src="/cezaraugusto/docs.extensioncreate.com/app.js" data-base="/cezaraugusto/docs.extensioncreate.com/"></script>
+
+    <div aria-hidden="true" hidden="">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hash" id="icon-hash"><line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link" id="icon-anchor-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy" id="icon-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check" id="icon-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+  
+
+</body></html>

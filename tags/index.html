@@ -7,10 +7,10 @@
     <meta name="description" content="A simple, lightweight, and flexible note-taking template for Eleventy.">
     <title>Tags</title>
     <meta name="generator" content="Eleventy v2.0.1">
-    <link rel="stylesheet" href="/app.green.css">
+    <link rel="stylesheet" href="/cezaraugusto/docs.extensioncreate.com/app.green.css">
   </head>
   <body>
-    <script defer src="https://analytics.us.umami.is/script.js" data-website-id="1dfc106b-1ef8-4e4a-b10c-515ade0e08c8"></script>
+    <script defer="" src="https://analytics.us.umami.is/script.js" data-website-id="1dfc106b-1ef8-4e4a-b10c-515ade0e08c8"></script>
     <script>document.documentElement.setAttribute("data-theme", /"(\w+)"+/.exec(localStorage.getItem("theme"))?.[1] || "system")</script>
     <script>document.documentElement.classList.add("supports-js")</script>
     <a href="#app-content" class="skip-link" lang="en">
@@ -21,15 +21,9 @@
     <div class="app-layout">
       
 
-<header class="app-header" x-data x-bind="WindowScroll">
+<header class="app-header" x-data="" x-bind="WindowScroll">
   <div class="hide-xl">
-  <button
-    class="icon-btn"
-    :aria-expanded="$store.nav.open"
-    @click="$store.nav.toggle()"
-    x-cloak
-    lang="en"
-  >
+  <button class="icon-btn" :aria-expanded="$store.nav.open" @click="$store.nav.toggle()" x-cloak="" lang="en">
     <span x-show="!$store.nav.open"><svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span>
     <span x-show="$store.nav.open"><svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
     <span class="visually-hidden">Menu</span>
@@ -37,46 +31,25 @@
 </div>
 
 
-  <a href="/" class="app-header__title">
+  <a href="/cezaraugusto/docs.extensioncreate.com/" class="app-header__title">
     🧩 extension-create
   </a>
 
   
 
-<div role="radiogroup" aria-label="Appearance" class="theme-switcher" x-data x-cloak lang="en">
-  <input
-    id="id-cf575db7-light"
-    type="radio"
-    name="appearance"
-    x-model="$store.appearance.theme"
-    value="light"
-    class="visually-hidden"
-  >
-  <label for="id-cf575db7-light" class="theme-switcher__label" aria-label="Light">
+<div role="radiogroup" aria-label="Appearance" class="theme-switcher" x-data="" x-cloak="" lang="en">
+  <input id="id-c88d6405-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
+  <label for="id-c88d6405-light" class="theme-switcher__label" aria-label="Light">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
   </label>
 
-  <input
-    id="id-cf575db7-dark"
-    type="radio"
-    name="appearance"
-    x-model="$store.appearance.theme"
-    value="dark"
-    class="visually-hidden"
-  >
-  <label for="id-cf575db7-dark" class="theme-switcher__label" aria-label="Dark">
+  <input id="id-c88d6405-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
+  <label for="id-c88d6405-dark" class="theme-switcher__label" aria-label="Dark">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
   </label>
 
-  <input
-    id="id-cf575db7-system"
-    type="radio"
-    name="appearance"
-    x-model="$store.appearance.theme"
-    value="system"
-    class="visually-hidden"
-  >
-  <label for="id-cf575db7-system" class="theme-switcher__label" aria-label="System">
+  <input id="id-c88d6405-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
+  <label for="id-c88d6405-system" class="theme-switcher__label" aria-label="System">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
   </label>
 </div>
@@ -89,39 +62,14 @@
 
   
 
-  <div x-cloak x-data="search" @click.away="open = false" class="search" data-mode="overlay">
-    <input
-      data-kbd-trigger
-      type="search"
-      role="combobox"
-      aria-autocomplete="list"
-      aria-haspopup="listbox"
-      aria-owns="id-a4252eab-popup"
-      aria-controls="id-a4252eab-popup"
-      aria-activedescendant
-      aria-expanded="false"
-      :aria-activedescendant="open && selectedId ? `id-a4252eab-result-${selectedId}` : ''"
-      :aria-expanded="open"
-      placeholder="Search"
-      class="search__input"
-      autocorrect="off"
-      autocapitalize="off"
-      enterkeyhint="search"
-      required
-      x-model="term"
-      x-init="$store.hotkeys.register(&#39;/&#39;, () =&gt; $el.focus())"
-      @focus="open = true"
-      @keydown="onKeyDown"
-      @pageshow.window="term = $el.value"
-      lang="en"
-      
-    >
+  <div x-cloak="" x-data="search" @click.away="open = false" class="search" data-mode="overlay">
+    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-698d7949-popup" aria-controls="id-698d7949-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open && selectedId ? `id-698d7949-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register(&#39;/&#39;, () =&gt; $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
     
       <kbd class="search__kbd" aria-hidden="true">/</kbd>
-      <span class="visually-hidden" lang="en">Press <kbd>/<kbd> to activate search</span>
+      <span class="visually-hidden" lang="en">Press <kbd>/<kbd> to activate search</kbd></kbd></span>
     
     <template x-if="open">
-      <div class="search__popover" id="id-a4252eab-popup">
+      <div class="search__popover" id="id-698d7949-popup">
         <div x-show="!term" class="search__info" lang="en">
           Search by title, content and #tags
         </div>
@@ -135,14 +83,8 @@
         <ul x-show="term && results && results.length" class="search__results" role="listbox" aria-label="Search Results">
           <template x-if="term && results && results.length">
             <template x-for="(result, index) in results" :key="result.id">
-              <li role="option" :id="`id-a4252eab-result-${result.id}`">
-                <a
-                  :href="result.url"
-                  class="search__result"
-                  :aria-selected="result.id === selectedId"
-                  x-effect="result.id === selectedId && $el.scrollIntoView({ block: 'nearest' })"
-                  :data-first="index == 0"
-                >
+              <li role="option" :id="`id-698d7949-result-${result.id}`">
+                <a :href="result.url" class="search__result" :aria-selected="result.id === selectedId" x-effect="result.id === selectedId && $el.scrollIntoView({ block: 'nearest' })" :data-first="index == 0">
                   <span class="search__note-title" x-text="result.title"></span>
                   <span class="search__note-content" x-html="result.excerpt"></span>
                   <span class="search__selected-icon" aria-hidden="true">
@@ -160,7 +102,7 @@
 
   </div>
   <div class="hide-md">
-    <a href="/search/" class="icon-btn" lang="en">
+    <a href="/cezaraugusto/docs.extensioncreate.com/search/" class="icon-btn" lang="en">
   <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
   <span class="visually-hidden">Search</span>
 </a>
@@ -169,12 +111,7 @@
 </header>
 
       <div class="app-layout__wrapper">
-        <div
-          class="app-layout__sidebar"
-          x-data="scrollContainer('app:sidebar')"
-          x-bind="container"
-          :data-open="$store.nav.open.toString()"
-        >
+        <div class="app-layout__sidebar" x-data="scrollContainer('app:sidebar')" x-bind="container" :data-open="$store.nav.open.toString()">
           <div class="app-layout__sidebar-inner">
             
 
@@ -185,11 +122,7 @@
     <h3 id="app:sidebar:nav" class="visually-hidden" lang="en">Main</h3>
     <ul class="nav-list" role="list" aria-labelledby="app:sidebar:nav">
       <li>
-        <a
-          href="/"
-          
-          class="nav-list__link"
-        >
+        <a href="/cezaraugusto/docs.extensioncreate.com/" class="nav-list__link">
           <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
           
           
@@ -198,12 +131,7 @@
       </li>
       
       <li>
-        <a
-          href="/search/"
-          
-          class="nav-list__link"
-          lang="en"
-        >
+        <a href="/cezaraugusto/docs.extensioncreate.com/search/" class="nav-list__link" lang="en">
           <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           <span>Search</span>
         </a>
@@ -217,22 +145,14 @@
       <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:links">
         
           <li>
-            <a
-              href="https://github.com/sponsors/cezaraugusto"
-              target=&quot;_blank&quot; rel=&quot;noopener&quot;
-              class="nav-list__link"
-            >
+            <a href="https://github.com/sponsors/cezaraugusto" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-check"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
               <span>Become a Sponsor</span>
             </a>
           </li>
         
           <li>
-            <a
-              href="https://github.com/cezaraugusto/extension-create/graphs/contributors"
-              target=&quot;_blank&quot; rel=&quot;noopener&quot;
-              class="nav-list__link"
-            >
+            <a href="https://github.com/cezaraugusto/extension-create/graphs/contributors" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
               <span>Contributors Hall of Fame</span>
             </a>
@@ -243,7 +163,7 @@
   
 
   <template x-if="$store.bookmarks.items.length">
-    <nav aria-labelledby="app:sidebar:section:bookmarks" class="nav-section" x-cloak>
+    <nav aria-labelledby="app:sidebar:section:bookmarks" class="nav-section" x-cloak="">
       <h3 id="app:sidebar:section:bookmarks" class="nav-section__title" lang="en">Bookmarks</h3>
       <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:bookmarks">
         <template x-for="bkm in $store.bookmarks.items">
@@ -259,48 +179,20 @@
   </template>
 
   
-    <nav aria-labelledby="app:sidebar:section:notes" class="nav-section">
-      <h3 id="app:sidebar:section:notes" class="nav-section__title" lang="en">Notes</h3>
-      
-        <div
-          class="nav-group"
-          
-          x-data="collapsible('app:sidebar:section:notes:group:0:list', true)"
-          :data-expanded="expanded"
-          
-          data-expanded="true"
-        >
-          
-            <h4 class="nav-group__title" id="app:sidebar:section:notes:group:0:title">
-              <button
-                type="button"
-                class="nav-group__toggle" 
-                aria-controls="app:sidebar:section:notes:group:0:list"
-                aria-expanded="true"
-                :aria-expanded="expanded"
-                @click="toggle()"
-              >
-                <span>Getting Started</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </h4>
-          
-          <div 
-            x-show="expanded"
-            id="app:sidebar:section:notes:group:0:list">
-            
-  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:notes:group:0:title">
     
-      <li
+      <nav aria-labelledby="app:sidebar:section:1" class="nav-section">
+        <h3 id="app:sidebar:section:1" class="nav-section__title">Getting Started</h3>
         
-      >
+          <div class="nav-group" data-expanded="true">
+            
+            <div id="app:sidebar:section:1:group:0:list">
+              
+  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:1:group:0:title">
+    
+      <li>
         
           <div class="nav-list__link-with-toggle">
-            <a
-              href="/n/gettingstarted/get-started-immediately/"
-              
-              class="nav-list__link"
-            >
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/get-started-immediately/" class="nav-list__link">
               <span>🔥 Get Started Immediately</span>
             </a>
             
@@ -310,17 +202,134 @@
         
       </li>
     
-      <li
-        
-      >
+      <li>
         
           <div class="nav-list__link-with-toggle">
-            <a
-              href="/n/gettingstarted/create-your-first-extension/"
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/create-your-first-extension/" class="nav-list__link">
+              <span>Create Your First Extension</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/remote-extension-execution/" class="nav-list__link">
+              <span>Remote Extension Execution</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/templates/" class="nav-list__link">
+              <span>Templates</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+  </ul>
+
+            </div>
+          </div>
+        
+      </nav>
+    
+      <nav aria-labelledby="app:sidebar:section:4" class="nav-section">
+        <h3 id="app:sidebar:section:4" class="nav-section__title">Guides</h3>
+        
+          <div class="nav-group" x-data="collapsible('app:sidebar:section:4:group:2:list', true)" :data-expanded="expanded" data-expanded="true">
+            
+              <h4 class="nav-group__title" id="app:sidebar:section:4:group:2:title">
+                <button type="button" class="nav-group__toggle" aria-controls="app:sidebar:section:4:group:2:list" aria-expanded="true" :aria-expanded="expanded" @click="toggle()">
+                  <span>Development</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </h4>
+            
+            <div x-show="expanded" id="app:sidebar:section:4:group:2:list">
               
-              class="nav-list__link"
-            >
-              <span>Create your First Extension</span>
+  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:4:group:2:title">
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/webassembly/" class="nav-list__link">
+              <span>WebAssembly</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li x-data="collapsible('app:sidebar:section:4:group:2:tree:modern-javascript', true)">
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/" class="nav-list__link">
+              <span>Modern JavaScript</span>
+            </a>
+            
+              <button type="button" class="nav-list__link nav-list__toggle" aria-controls="app:sidebar:section:4:group:2:tree:modern-javascript:list" aria-expanded="true" :aria-expanded="expanded" @click="toggle()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <span class="visually-hidden">
+                  Toggle Modern JavaScript
+                </span>
+              </button>
+            
+          </div>
+        
+
+        
+          <div x-show="expanded" id="app:sidebar:section:4:group:2:tree:modern-javascript:list">
+            
+  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:4:group:2:title">
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/ecmascript-modules/" class="nav-list__link">
+              <span>ECMAScript Modules</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/typescript/" class="nav-list__link">
+              <span>TypeScript</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/react/" class="nav-list__link">
+              <span>React</span>
             </a>
             
           </div>
@@ -332,48 +341,36 @@
   </ul>
 
           </div>
-        </div>
-      
-        <div
-          class="nav-group"
-          
-          x-data="collapsible('app:sidebar:section:notes:group:1:list', true)"
-          :data-expanded="expanded"
-          
-          data-expanded="true"
-        >
-          
-            <h4 class="nav-group__title" id="app:sidebar:section:notes:group:1:title">
-              <button
-                type="button"
-                class="nav-group__toggle" 
-                aria-controls="app:sidebar:section:notes:group:1:list"
-                aria-expanded="true"
-                :aria-expanded="expanded"
-                @click="toggle()"
-              >
-                <span>Features</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </h4>
-          
-          <div 
-            x-show="expanded"
-            id="app:sidebar:section:notes:group:1:list">
-            
-  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:notes:group:1:title">
-    
-      <li
         
-      >
+      </li>
+    
+      <li x-data="collapsible('app:sidebar:section:4:group:2:tree:modern-css', true)">
         
           <div class="nav-list__link-with-toggle">
-            <a
-              href="/n/features/manifest-and-api-support/"
-              
-              class="nav-list__link"
-            >
-              <span>Manifest and API Support</span>
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-css/" class="nav-list__link">
+              <span>Modern CSS</span>
+            </a>
+            
+              <button type="button" class="nav-list__link nav-list__toggle" aria-controls="app:sidebar:section:4:group:2:tree:modern-css:list" aria-expanded="true" :aria-expanded="expanded" @click="toggle()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <span class="visually-hidden">
+                  Toggle Modern CSS
+                </span>
+              </button>
+            
+          </div>
+        
+
+        
+          <div x-show="expanded" id="app:sidebar:section:4:group:2:tree:modern-css:list">
+            
+  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:4:group:2:title">
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-css/css-modules/" class="nav-list__link">
+              <span>CSS Modules</span>
             </a>
             
           </div>
@@ -382,16 +379,96 @@
         
       </li>
     
-      <li
-        
-      >
+      <li>
         
           <div class="nav-list__link-with-toggle">
-            <a
-              href="/n/features/special-folders/"
-              
-              class="nav-list__link"
-            >
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-css/tailwind-css/" class="nav-list__link">
+              <span>Tailwind CSS</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+  </ul>
+
+          </div>
+        
+      </li>
+    
+      <li x-data="collapsible('app:sidebar:section:4:group:2:tree:the-manifest-file', true)">
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/" class="nav-list__link">
+              <span>The Manifest File</span>
+            </a>
+            
+              <button type="button" class="nav-list__link nav-list__toggle" aria-controls="app:sidebar:section:4:group:2:tree:the-manifest-file:list" aria-expanded="true" :aria-expanded="expanded" @click="toggle()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <span class="visually-hidden">
+                  Toggle The Manifest File
+                </span>
+              </button>
+            
+          </div>
+        
+
+        
+          <div x-show="expanded" id="app:sidebar:section:4:group:2:tree:the-manifest-file:list">
+            
+  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:4:group:2:title">
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-capabilities/" class="nav-list__link">
+              <span>Manifest Capabilities</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/the-manifest-file/manifest-compatibility/" class="nav-list__link">
+              <span>Manifest Compatibility</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+  </ul>
+
+          </div>
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/environment-variables/" class="nav-list__link">
+              <span>Environment Variables</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/development/special-folders/" class="nav-list__link">
               <span>Special Folders</span>
             </a>
             
@@ -403,10 +480,94 @@
     
   </ul>
 
+            </div>
           </div>
-        </div>
-      
-    </nav>
+        
+          <div class="nav-group" x-data="collapsible('app:sidebar:section:4:group:3:list', true)" :data-expanded="expanded" data-expanded="true">
+            
+              <h4 class="nav-group__title" id="app:sidebar:section:4:group:3:title">
+                <button type="button" class="nav-group__toggle" aria-controls="app:sidebar:section:4:group:3:list" aria-expanded="true" :aria-expanded="expanded" @click="toggle()">
+                  <span>Commands</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </h4>
+            
+            <div x-show="expanded" id="app:sidebar:section:4:group:3:list">
+              
+  <ul class="nav-list" role="list" aria-labelledby="app:sidebar:section:4:group:3:title">
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/reference/" class="nav-list__link">
+              <span>Reference</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/create/" class="nav-list__link">
+              <span>create</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/dev/" class="nav-list__link">
+              <span>dev</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/start/" class="nav-list__link">
+              <span>start</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <div class="nav-list__link-with-toggle">
+            <a href="/cezaraugusto/docs.extensioncreate.com/n/commands/build/" class="nav-list__link">
+              <span>build</span>
+            </a>
+            
+          </div>
+        
+
+        
+      </li>
+    
+  </ul>
+
+            </div>
+          </div>
+        
+      </nav>
+    
   
 
   
@@ -430,9 +591,9 @@
       </div>
     </div>
 
-    <script src="/app.js" data-base="/"></script>
+    <script src="/cezaraugusto/docs.extensioncreate.com/app.js" data-base="/cezaraugusto/docs.extensioncreate.com/"></script>
 
-    <div aria-hidden="true" hidden>
+    <div aria-hidden="true" hidden="">
       <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hash" id="icon-hash"><line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line></svg>
       <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link" id="icon-anchor-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
       <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy" id="icon-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
