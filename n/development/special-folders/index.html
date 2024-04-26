@@ -29,24 +29,24 @@
 
 
   <a href="/cezaraugusto/docs.extensioncreate.com/" class="app-header__title">
-    🧩 extension-create
+    🧩 Extension.js
   </a>
 
   
 
 <div role="radiogroup" aria-label="Appearance" class="theme-switcher" x-data="" x-cloak="" lang="en">
-  <input id="id-b2de7787-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
-  <label for="id-b2de7787-light" class="theme-switcher__label" aria-label="Light">
+  <input id="id-1c4b5ff2-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
+  <label for="id-1c4b5ff2-light" class="theme-switcher__label" aria-label="Light">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
   </label>
 
-  <input id="id-b2de7787-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
-  <label for="id-b2de7787-dark" class="theme-switcher__label" aria-label="Dark">
+  <input id="id-1c4b5ff2-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
+  <label for="id-1c4b5ff2-dark" class="theme-switcher__label" aria-label="Dark">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
   </label>
 
-  <input id="id-b2de7787-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
-  <label for="id-b2de7787-system" class="theme-switcher__label" aria-label="System">
+  <input id="id-1c4b5ff2-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
+  <label for="id-1c4b5ff2-system" class="theme-switcher__label" aria-label="System">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
   </label>
 </div>
@@ -60,13 +60,13 @@
   
 
   <div x-cloak="" x-data="search" @click.away="open = false" class="search" data-mode="overlay">
-    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-9e19f449-popup" aria-controls="id-9e19f449-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-9e19f449-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
+    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-207bf21e-popup" aria-controls="id-207bf21e-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-207bf21e-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
     
       <kbd class="search__kbd" aria-hidden="true">/</kbd>
       <span class="visually-hidden" lang="en">Press <kbd>/<kbd> to activate search</kbd></kbd></span>
     
     <template x-if="open">
-      <div class="search__popover" id="id-9e19f449-popup">
+      <div class="search__popover" id="id-207bf21e-popup">
         <div x-show="!term" class="search__info" lang="en">
           Search by title, content and #tags
         </div>
@@ -80,7 +80,7 @@
         <ul x-show="term &amp;&amp; results &amp;&amp; results.length" class="search__results" role="listbox" aria-label="Search Results">
           <template x-if="term &amp;&amp; results &amp;&amp; results.length">
             <template x-for="(result, index) in results" :key="result.id">
-              <li role="option" :id="`id-9e19f449-result-${result.id}`">
+              <li role="option" :id="`id-207bf21e-result-${result.id}`">
                 <a :href="result.url" class="search__result" :aria-selected="result.id === selectedId" x-effect="result.id === selectedId &amp;&amp; $el.scrollIntoView({ block: 'nearest' })" :data-first="index == 0">
                   <span class="search__note-title" x-text="result.title"></span>
                   <span class="search__note-content" x-html="result.excerpt"></span>
@@ -149,7 +149,7 @@
           </li>
         
           <li>
-            <a href="https://github.com/cezaraugusto/extension-create/graphs/contributors" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
+            <a href="https://github.com/cezaraugusto/Extension.js/graphs/contributors" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
               <span>Contributors Hall of Fame</span>
             </a>
@@ -578,9 +578,9 @@
     <article>
       <h1 class="page__title">Special Folders</h1>
       <div class="article">
-        <p>During development, sometimes we need a standalone script or page that adds extra functionality to an extension. It could be an iframe in a sandboxed page, or a script to be used as a content_script via <code>chrome.scripting.executeScript</code>. Given these features can be a core part of your extension development, they need the same support as any other file handled by the manifest file, like support for TypeScript, pre-processors and all other features provided by extension-create.</p>
+        <p>During development, sometimes we need a standalone script or page that adds extra functionality to an extension. It could be an iframe in a sandboxed page, or a script to be used as a content_script via <code>chrome.scripting.executeScript</code>. Given these features can be a core part of your extension development, they need the same support as any other file handled by the manifest file, like support for TypeScript, pre-processors and all other features provided by Extension.js.</p>
 <p>This is the use case of the special folders.</p>
-<p>Special folders are folders that allows you to work with files outside the scope of the manifest file. Since <code>extension-create</code> uses the manifest to generate the assets, files outside its scope are not bundled by default -- unless they are in a special folder.</p>
+<p>Special folders are folders that allows you to work with files outside the scope of the manifest file. Since <code>Extension.js</code> uses the manifest to generate the assets, files outside its scope are not bundled by default -- unless they are in a special folder.</p>
 <table>
 <thead>
 <tr>
@@ -599,7 +599,7 @@
 </tr>
 <tr>
 <td><code>public/</code></td>
-<td>Allows adding static assets to the output directory without bundling. These files are not processed by extension-create.</td>
+<td>Allows adding static assets to the output directory without bundling. These files are not processed by Extension.js.</td>
 </tr>
 </tbody>
 </table>
@@ -616,16 +616,16 @@ An iframe as a sandboxed frame. <a href="https://github.com/GoogleChrome/chrome-
 <li>Scripts injected via <code>chrome.scripting.executeScript</code>. <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/scripting">See the scripting sample from Chrome Samples repository.</a> where the API is called to request a script not defined in the <code>manifest.json</code> file. Adding the script to a <code>scripts/</code> folder guarantees support for hot page reloads and full integration with JavaScript/CSS pre/post-processors.</li>
 </ul>
 <h2 id="handling-static-assets" tabindex="-1">Handling Static Assets <a class="anchor-link" href="#handling-static-assets" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h2>
-<p>For files that you don't want extension-create to parse, or if you want a predictable output path, add your files to the <code>public/</code> folder, like <code>&lt;your-project&gt;/public/icon/subfolder/icon.png</code>. Any file added to this folder will be copied to the output path as-is.</p>
-<p>See thee example below using the previous <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/sandbox/sandbox">sandbox sample from Chrome Samples repository</a>. <code>handlebars.js</code> is an external lib that we don't want to parse, so we add it to the <code>/public</code> path, and <code>extension-create</code> will output the file as-is, skipping the compilation process.</p>
+<p>For files that you don't want Extension.js to parse, or if you want a predictable output path, add your files to the <code>public/</code> folder, like <code>&lt;your-project&gt;/public/icon/subfolder/icon.png</code>. Any file added to this folder will be copied to the output path as-is.</p>
+<p>See thee example below using the previous <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/sandbox/sandbox">sandbox sample from Chrome Samples repository</a>. <code>handlebars.js</code> is an external lib that we don't want to parse, so we add it to the <code>/public</code> path, and <code>Extension.js</code> will output the file as-is, skipping the compilation process.</p>
 <p><img src="e330f2f4c1e1a09fe278cabd584641a37ed99a03.png" alt="Public Folder"></p>
 <h2 id="next-steps" tabindex="-1">Next Steps <a class="anchor-link" href="#next-steps" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h2>
 <ul>
 <li>Check the diffent types of <a href="/cezaraugusto/docs.extensioncreate.com/n/getting-started/templates/">Templates</a> to bootstrap your next extension.</li>
-<li>Learn more about how <code>extension-create</code> handles <a href="/cezaraugusto/docs.extensioncreate.com/manifest-compatibility-checker">Manifest Compatibility Checker</a>.</li>
+<li>Learn more about how <code>Extension.js</code> handles <a href="/cezaraugusto/docs.extensioncreate.com/manifest-compatibility-checker">Manifest Compatibility Checker</a>.</li>
 </ul>
 <hr>
-<p><strong>🧩 extension-create</strong> • create cross-browser extensions with no build configuration.</p>
+<p><strong>🧩 Extension.js</strong> • create cross-browser extensions with no build configuration.</p>
 
       </div>
     </article>
@@ -748,7 +748,7 @@ An iframe as a sandboxed frame. <a href="https://github.com/GoogleChrome/chrome-
 
     
   
-    <a href="https://github.com/cezaraugusto/extension-create/edit/main/Development/Special%20Folders.md" class="toggle-btn" lang="en">
+    <a href="https://github.com/cezaraugusto/Extension.js/edit/main/Development/Special%20Folders.md" class="toggle-btn" lang="en">
       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
       <span>Edit</span>
     </a>

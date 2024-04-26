@@ -29,24 +29,24 @@
 
 
   <a href="/cezaraugusto/docs.extensioncreate.com/" class="app-header__title">
-    🧩 extension-create
+    🧩 Extension.js
   </a>
 
   
 
 <div role="radiogroup" aria-label="Appearance" class="theme-switcher" x-data="" x-cloak="" lang="en">
-  <input id="id-d94f2833-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
-  <label for="id-d94f2833-light" class="theme-switcher__label" aria-label="Light">
+  <input id="id-6ff774ab-light" type="radio" name="appearance" x-model="$store.appearance.theme" value="light" class="visually-hidden">
+  <label for="id-6ff774ab-light" class="theme-switcher__label" aria-label="Light">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
   </label>
 
-  <input id="id-d94f2833-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
-  <label for="id-d94f2833-dark" class="theme-switcher__label" aria-label="Dark">
+  <input id="id-6ff774ab-dark" type="radio" name="appearance" x-model="$store.appearance.theme" value="dark" class="visually-hidden">
+  <label for="id-6ff774ab-dark" class="theme-switcher__label" aria-label="Dark">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
   </label>
 
-  <input id="id-d94f2833-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
-  <label for="id-d94f2833-system" class="theme-switcher__label" aria-label="System">
+  <input id="id-6ff774ab-system" type="radio" name="appearance" x-model="$store.appearance.theme" value="system" class="visually-hidden">
+  <label for="id-6ff774ab-system" class="theme-switcher__label" aria-label="System">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
   </label>
 </div>
@@ -60,13 +60,13 @@
   
 
   <div x-cloak="" x-data="search" @click.away="open = false" class="search" data-mode="overlay">
-    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-06def2f8-popup" aria-controls="id-06def2f8-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-06def2f8-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
+    <input data-kbd-trigger="" type="search" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-owns="id-328ee546-popup" aria-controls="id-328ee546-popup" aria-activedescendant="" aria-expanded="false" :aria-activedescendant="open &amp;&amp; selectedId ? `id-328ee546-result-${selectedId}` : ''" :aria-expanded="open" placeholder="Search" class="search__input" autocorrect="off" autocapitalize="off" enterkeyhint="search" required="" x-model="term" x-init="$store.hotkeys.register('/', () => $el.focus())" @focus="open = true" @keydown="onKeyDown" @pageshow.window="term = $el.value" lang="en">
     
       <kbd class="search__kbd" aria-hidden="true">/</kbd>
       <span class="visually-hidden" lang="en">Press <kbd>/<kbd> to activate search</kbd></kbd></span>
     
     <template x-if="open">
-      <div class="search__popover" id="id-06def2f8-popup">
+      <div class="search__popover" id="id-328ee546-popup">
         <div x-show="!term" class="search__info" lang="en">
           Search by title, content and #tags
         </div>
@@ -80,7 +80,7 @@
         <ul x-show="term &amp;&amp; results &amp;&amp; results.length" class="search__results" role="listbox" aria-label="Search Results">
           <template x-if="term &amp;&amp; results &amp;&amp; results.length">
             <template x-for="(result, index) in results" :key="result.id">
-              <li role="option" :id="`id-06def2f8-result-${result.id}`">
+              <li role="option" :id="`id-328ee546-result-${result.id}`">
                 <a :href="result.url" class="search__result" :aria-selected="result.id === selectedId" x-effect="result.id === selectedId &amp;&amp; $el.scrollIntoView({ block: 'nearest' })" :data-first="index == 0">
                   <span class="search__note-title" x-text="result.title"></span>
                   <span class="search__note-content" x-html="result.excerpt"></span>
@@ -149,7 +149,7 @@
           </li>
         
           <li>
-            <a href="https://github.com/cezaraugusto/extension-create/graphs/contributors" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
+            <a href="https://github.com/cezaraugusto/Extension.js/graphs/contributors" target="&quot;_blank&quot;" rel="&quot;noopener&quot;" class="nav-list__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
               <span>Contributors Hall of Fame</span>
             </a>
@@ -579,9 +579,9 @@
       <h1 class="page__title">TypeScript</h1>
       <div class="article">
         <p>TypeScript is JavaScript with syntax for types.</p>
-<p><code>extension-create</code> offers built-in support for TypeScript files.</p>
+<p><code>Extension.js</code> offers built-in support for TypeScript files.</p>
 <h2 id="starter-typescript-template" tabindex="-1">Starter TypeScript Template <a class="anchor-link" href="#starter-typescript-template" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h2>
-<p><code>extension-create</code> comes with a default TypeScript template for new projects, which you can use as a starting point for your next TypeScript-based Extension. This is the easiest way to have TypeScript integrated with <code>extension-create</code>.</p>
+<p><code>Extension.js</code> comes with a default TypeScript template for new projects, which you can use as a starting point for your next TypeScript-based Extension. This is the easiest way to have TypeScript integrated with <code>Extension.js</code>.</p>
 <p><img src="6b34e20abd01cc86a910b45faca27d7886ceea99.png" alt="TypeScript Extension Template"></p>
 <h4 id="try-it-yourself" tabindex="-1">Try it yourself <a class="anchor-link" href="#try-it-yourself" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h4>
 
@@ -628,7 +628,7 @@ npx tsc <span class="token parameter variable">--init</span> </code></pre>
         </div>
       <h3 id="configuration" tabindex="-1">Configuration <a class="anchor-link" href="#configuration" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h3>
 <h4 id="automatic-typescript-support" tabindex="-1">Automatic TypeScript Support <a class="anchor-link" href="#automatic-typescript-support" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h4>
-<p>If your extension has TypeScript installed but no <code>tsconfig.json</code> file, <code>extension-create</code> will attempt to automate the integration process by creating a <code>tsconfig.json</code> file at the project root, with the following defaults:</p>
+<p>If your extension has TypeScript installed but no <code>tsconfig.json</code> file, <code>Extension.js</code> will attempt to automate the integration process by creating a <code>tsconfig.json</code> file at the project root, with the following defaults:</p>
 
         <div class="code-block">
           <pre class="language-json5"><code class="language-json5"><span class="token property unquoted">compilerOptions</span><span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -686,7 +686,7 @@ npx tsc <span class="token parameter variable">--init</span> </code></pre>
           </button>
         </div>
       <h4 id="automatic-type-injection" tabindex="-1">Automatic Type Injection <a class="anchor-link" href="#automatic-type-injection" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h4>
-<p>In order to handle the multiple import capabilities such as <code>import()</code> of JavaScript modules and file assets, <code>extension-create</code> injects a <code>extension.d.ts</code> file at the root of your project folder.</p>
+<p>In order to handle the multiple import capabilities such as <code>import()</code> of JavaScript modules and file assets, <code>Extension.js</code> injects a <code>extension.d.ts</code> file at the root of your project folder.</p>
 <p><img src="546eb50fc68ed42e706ba839814ef7344255b328.png" alt="TypeScript Extension Type Definition"></p>
 <div class="callout" data-color="mint" data-type="tip"><div class="callout__title"><div class="callout__icon"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-flame" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -697,7 +697,7 @@ npx tsc <span class="token parameter variable">--init</span> </code></pre>
 </div><div>Tip</div></div><div class="callout__content article"><p>Ensure the <code>extension.d.ts</code> file is added to your <code>.gitignore</code> file as it is auto-generated and only useful during <code>development</code> mode.</p>
 </div></div>
 <h4 id="tsconfig-json-overrides" tabindex="-1"><code>tsconfig.json</code> Overrides <a class="anchor-link" href="#tsconfig-json-overrides" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h4>
-<p><code>extension-create</code> applies some defaults to your extension <code>tsconfig.json</code> file. The options below overrides any user-defined rules.</p>
+<p><code>Extension.js</code> applies some defaults to your extension <code>tsconfig.json</code> file. The options below overrides any user-defined rules.</p>
 
         <div class="code-block">
           <pre class="language-json5"><code class="language-json5"><span class="token punctuation">{</span>
@@ -742,11 +742,11 @@ npx tsc <span class="token parameter variable">--init</span> </code></pre>
         </div>
       <h2 id="next-steps" tabindex="-1">Next Steps <a class="anchor-link" href="#next-steps" aria-hidden="true"><svg width="0.8em" height="0.8em"><use xlink:href="#icon-anchor-link"></use></svg></a></h2>
 <ul>
-<li>Learn how <code>extension-create</code> works with extensions using <a href="/cezaraugusto/docs.extensioncreate.com/css-pre-processors">CSS Pre-Processors</a>.</li>
-<li>Learn how <code>extension-create</code> works with extensions using <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/react/">React</a>.</li>
+<li>Learn how <code>Extension.js</code> works with extensions using <a href="/cezaraugusto/docs.extensioncreate.com/css-pre-processors">CSS Pre-Processors</a>.</li>
+<li>Learn how <code>Extension.js</code> works with extensions using <a href="/cezaraugusto/docs.extensioncreate.com/n/development/modern-javascript/react/">React</a>.</li>
 </ul>
 <hr>
-<p><strong>🧩 extension-create</strong> • create cross-browser extensions with no build configuration.</p>
+<p><strong>🧩 Extension.js</strong> • create cross-browser extensions with no build configuration.</p>
 
       </div>
     </article>
@@ -892,7 +892,7 @@ npx tsc <span class="token parameter variable">--init</span> </code></pre>
 
     
   
-    <a href="https://github.com/cezaraugusto/extension-create/edit/main/Development/Modern%20JavaScript/TypeScript.md" class="toggle-btn" lang="en">
+    <a href="https://github.com/cezaraugusto/Extension.js/edit/main/Development/Modern%20JavaScript/TypeScript.md" class="toggle-btn" lang="en">
       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
       <span>Edit</span>
     </a>
