@@ -45,38 +45,38 @@
 
 <div role="radiogroup" aria-label="Appearance" class="theme-switcher" x-data x-cloak lang="en">
   <input
-    id="id-13f64601-light"
+    id="id-11b9799a-light"
     type="radio"
     name="appearance"
     x-model="$store.appearance.theme"
     value="light"
     class="visually-hidden"
   >
-  <label for="id-13f64601-light" class="theme-switcher__label" aria-label="Light">
+  <label for="id-11b9799a-light" class="theme-switcher__label" aria-label="Light">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
   </label>
 
   <input
-    id="id-13f64601-dark"
+    id="id-11b9799a-dark"
     type="radio"
     name="appearance"
     x-model="$store.appearance.theme"
     value="dark"
     class="visually-hidden"
   >
-  <label for="id-13f64601-dark" class="theme-switcher__label" aria-label="Dark">
+  <label for="id-11b9799a-dark" class="theme-switcher__label" aria-label="Dark">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
   </label>
 
   <input
-    id="id-13f64601-system"
+    id="id-11b9799a-system"
     type="radio"
     name="appearance"
     x-model="$store.appearance.theme"
     value="system"
     class="visually-hidden"
   >
-  <label for="id-13f64601-system" class="theme-switcher__label" aria-label="System">
+  <label for="id-11b9799a-system" class="theme-switcher__label" aria-label="System">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.125em" height="1.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
   </label>
 </div>
@@ -96,11 +96,11 @@
       role="combobox"
       aria-autocomplete="list"
       aria-haspopup="listbox"
-      aria-owns="id-ede67e17-popup"
-      aria-controls="id-ede67e17-popup"
+      aria-owns="id-103abac3-popup"
+      aria-controls="id-103abac3-popup"
       aria-activedescendant
       aria-expanded="false"
-      :aria-activedescendant="open && selectedId ? `id-ede67e17-result-${selectedId}` : ''"
+      :aria-activedescendant="open && selectedId ? `id-103abac3-result-${selectedId}` : ''"
       :aria-expanded="open"
       placeholder="Search"
       class="search__input"
@@ -121,7 +121,7 @@
       <span class="visually-hidden" lang="en">Press <kbd>/<kbd> to activate search</span>
     
     <template x-if="open">
-      <div class="search__popover" id="id-ede67e17-popup">
+      <div class="search__popover" id="id-103abac3-popup">
         <div x-show="!term" class="search__info" lang="en">
           Search by title, content and #tags
         </div>
@@ -135,7 +135,7 @@
         <ul x-show="term && results && results.length" class="search__results" role="listbox" aria-label="Search Results">
           <template x-if="term && results && results.length">
             <template x-for="(result, index) in results" :key="result.id">
-              <li role="option" :id="`id-ede67e17-result-${result.id}`">
+              <li role="option" :id="`id-103abac3-result-${result.id}`">
                 <a
                   :href="result.url"
                   class="search__result"
